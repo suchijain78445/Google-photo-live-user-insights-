@@ -112,6 +112,7 @@ Return ONLY this JSON object — no markdown, no explanation:
 
 def call_groq(question: str) -> dict:
     """Call Groq API via httpx (server-side, key never leaves server)."""
+    groq_key = os.getenv("GROQ_API_KEY", "").strip()
     payload = {
         "model": GROQ_MODEL,
         "messages": [
@@ -123,7 +124,7 @@ def call_groq(question: str) -> dict:
     }
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {groq_key}",
         "User-Agent": "Mozilla/5.0 (compatible; RecallResearchBot/1.0)",
     }
 
@@ -170,7 +171,8 @@ def api_ask():
     Body: { "question": "..." }
     Returns: finding object in the standard schema.
     """
-    if not GROQ_API_KEY:
+    groq_key = os.getenv("GROQ_API_KEY", "").strip()
+    if not groq_key:
         return jsonify({"error": "GROQ_API_KEY not configured on server"}), 503
 
     body = request.get_json(force=True, silent=True) or {}
