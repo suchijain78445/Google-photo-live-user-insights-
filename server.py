@@ -163,6 +163,7 @@ def static_files(filename):
 
 
 @app.route("/api/ask", methods=["POST"])
+@app.route("/api/index.py", methods=["POST"])
 def api_ask():
     """
     Secure proxy endpoint for the Ask AI feature.
