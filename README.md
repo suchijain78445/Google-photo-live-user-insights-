@@ -1,19 +1,30 @@
-# Recall — Photo Retrieval Discovery Engine
+<div align="center">
+  <h1>Google Photos — AI Discovery Engine</h1>
+  <p>An AI-powered research platform analyzing why users struggle to find old photos, using real reviews from 4 major platforms.</p>
 
-> An AI-powered research tool that analyzes why users struggle to find old photos in Google Photos, using real review and discussion data from 4 sources.
+  <a href="https://google-photo-live-user-insights.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Full_Research_Report-5e6ad2?style=for-the-badge&logo=googledocs&logoColor=white" alt="Full Research Report" />
+  </a>
+  <a href="https://github.com/suchijain78445/Google-photo-live-user-insights-" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub_Repository-090e1a?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
+  </a>
+  <a href="docs/ARCHITECTURE.md" target="_blank">
+    <img src="https://img.shields.io/badge/Docs_&_Architecture-090e1a?style=for-the-badge&logo=read-the-docs&logoColor=white" alt="Docs & Architecture" />
+  </a>
+</div>
 
----
+<br>
 
-## What It Does
+## 🚀 Overview
 
-Recall ingests 500+ real user reviews from the App Store, Google Play, Google Photos Community forums, and a research dataset, then:
+Recall ingests 500+ real user reviews from the App Store, Google Play, Google Photos Community forums, and Reddit, then:
 
 1. **Normalizes** all data into a unified format
 2. **Filters** for photo retrieval/search-related content
-3. **Clusters** reviews into 6 discovery themes using sentence embeddings
+3. **Clusters** reviews into 6 discovery themes using AI sentence embeddings
 4. **Generates** 14 AI-researched findings (with verbatim quotes, PM insights, confidence scores)
 5. **Validates** that no quotes are hallucinated
-6. **Renders** everything in a dark-themed research dashboard
+6. **Renders** everything in a dark-themed, premium interactive research dashboard
 
 ---
 
