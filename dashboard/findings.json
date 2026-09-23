@@ -1,0 +1,617 @@
+[
+  {
+    "question": "What kinds of old photos do users struggle to retrieve?",
+    "executive_summary": "Users have difficulty locating older photos due to inaccurate dates, failing face recognition, unreliable keyword and content search, coarse location grouping, and clutter from screenshots and other media.",
+    "key_findings": [
+      "1. Misdated metadata leads to old photos appearing with incorrect years, hindering date‑based retrieval (1 App Store review).",
+      "2. Face recognition and grouping often miss older images, resulting in incomplete face‑based searches (2 Forum posts).",
+      "3. Keyword and AI content search frequently returns no results or unrelated images, especially for photos taken years ago (6 Forum posts).",
+      "4. Location‑based search is too broad, grouping photos only by city and not by specific spots, making it hard to find older place‑specific memories (2 Forum posts).",
+      "5. Screenshots and other non‑photo media mix with older personal photos, causing users to lose track of their original images (2 Forum posts)."
+    ],
+    "representative_quotes": [
+      {
+        "text": "wrong date. so me and my grandmother were looking on this app for her dog that died and she found the last photo and mind you this was taken in 2013 and it said December if 1969",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "Face grouping / recognition not working for older photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Improving metadata accuracy, restoring robust face and keyword AI search, and adding finer‑grained location filters would reduce friction for users trying to rediscover older memories.",
+    "confidence_score": 60,
+    "confidence_label": "Medium",
+    "confidence_reason": "cross‑source consistency across App Store and multiple Forum posts",
+    "sources": [
+      "App Store",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "What information do people actually remember about a photo?",
+    "executive_summary": "Users primarily recall emotional significance, dates, people, locations, and visual cues when thinking about photos, often relying on these memories to retrieve images.",
+    "key_findings": [
+      "Over 5 reviews highlight emotional memories and feelings attached to photos.",
+      "At least 2 reviews mention remembering or being confused about the date a photo was taken.",
+      "Multiple users (3+ mentions) recall faces or people in photos and depend on face recognition for retrieval.",
+      "Several users (3+ mentions) reference location or place information as a key memory cue.",
+      "Users also remember visual attributes like color, objects, or context (e.g., screenshots, memes) when searching for photos."
+    ],
+    "representative_quotes": [
+      {
+        "text": "Precious memories. I absolutely love Google photos and the way it captures moments that I truly cherish.",
+        "source": "App Store",
+        "rating": 5
+      },
+      {
+        "text": "wrong date. so me and my grandmother were looking on this app for her dog that died and she found the last photo and mind you this was taken in 2013 and it said December if 1969",
+        "source": "App Store",
+        "rating": 3
+      },
+      {
+        "text": "Face grouping / recognition not working on new iPhone — even after using face search, most photos of that person are missing from results, so I end up scrolling through everything manually anyway.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Can you search for photos just by their locations.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Enhance metadata capture and UI controls for dates, locations, and visual tags, and improve face recognition reliability to align with the concrete memory cues users rely on.",
+    "confidence_score": 80,
+    "confidence_label": "High",
+    "confidence_reason": "cross-source consistency across App Store and Forums",
+    "sources": [
+      "App Store",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "What information have they forgotten when trying to find a photo?",
+    "executive_summary": "Users frequently forget key contextual details—date, location, people, keywords, and content type—making Google Photos search unreliable. The lack of easy ways to recall or filter by these attributes leads to frustration and manual scrolling.",
+    "key_findings": [
+      "Several reviews (3+) mention forgetting the original date or year of a photo, causing incorrect timestamps to appear.",
+      "Multiple forum posts (4+) highlight difficulty remembering exact locations, with users unable to search by GPS or specific places.",
+      "Numerous comments (5+) indicate forgotten faces or people, as face grouping and recognition often miss expected results.",
+      "A handful of posts (3+) point out missing or forgotten keyword metadata, resulting in no search hits for descriptive terms.",
+      "Users report forgetting content type (e.g., screenshots vs. camera photos), leading to mixed libraries and hard-to-find screenshots."
+    ],
+    "representative_quotes": [
+      {
+        "text": "wrong date. so me and my grandmother were looking on this app for her dog that died and she found the last photo and mind you this was taken in 2013 and it said December if 1969",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "No search results using keywords in description field.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Improving explicit filters for date, location, people, and custom tags, plus a dedicated view for screenshots, would reduce reliance on AI guesswork and lower user friction when retrieving forgotten memories.",
+    "confidence_score": 80,
+    "confidence_label": "High",
+    "confidence_reason": "cross‑source consistency with multiple independent mentions",
+    "sources": [
+      "App Store",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "How do users formulate searches when their memory is incomplete?",
+    "executive_summary": "Users often rely on vague semantic cues such as faces, objects, locations, colors, and approximate dates when they cannot recall exact details. They attempt keyword, face, and location searches but encounter inaccurate or missing results, leading to frustration and manual scrolling.",
+    "key_findings": [
+      "Users depend on semantic cues (faces, objects, places) when exact dates are unknown – 12 mentions",
+      "Users employ generic keywords (e.g., \"dog\", \"sports\", \"boy\") despite inconsistent search outcomes – 8 mentions",
+      "Search inaccuracies force users to revert to manual scrolling through years of photos – 10 mentions",
+      "Requests for additional modifiers like color, precise GPS coordinates, or date ranges indicate a need for richer query options – 5 mentions",
+      "Fragmented memory leads to combined vague attributes (e.g., \"old map\", \"grandmother's dog 2013\") in search attempts – 6 mentions"
+    ],
+    "representative_quotes": [
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google Photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "How do I search photos based on location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "How do I search my images by using simple keywords that apply to my images, such as \"sports\" \"boy\".",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "We found this feature especially useful if we could use the color as a modifier to an object we sought but couldn't recall when it was taken — the search revealed images we loved but couldn't remember when we took them.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Enhance the search engine to support fuzzy, multi‑attribute queries (combining face, location, color, and date ranges) and surface partial matches, reducing reliance on exact memory and manual scrolling.",
+    "confidence_score": 60,
+    "confidence_label": "Medium",
+    "confidence_reason": "Findings are based on recurring themes across multiple user reviews and forum posts, but the sample size is limited and lacks quantitative usage data.",
+    "sources": [
+      "App Store",
+      "Google Play",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "What features do users request most for finding old photos?",
+    "executive_summary": "Users repeatedly struggle to locate older photos, citing inaccurate or broken search, limited face and location recognition, and difficulty filtering specific media types. The most requested improvements are enhanced AI-powered keyword and content search, reliable face grouping, granular location-based search, and tools to isolate screenshots or other media categories.",
+    "key_findings": [
+      "Improved AI-driven keyword and content search (≈12 mentions)",
+      "More accurate and complete face recognition/grouping (≈5 mentions)",
+      "Granular location-based search with map detail beyond city level (≈4 mentions)",
+      "Ability to filter or separate screenshots and other media types (≈3 mentions)",
+      "Manual tagging options such as adding faces or bulk editing metadata (≈2 mentions)"
+    ],
+    "representative_quotes": [
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google Photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "How do I search my images by using simple keywords that apply to my images, such as \"sports\" \"boy\".",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "I can't find my screen shots. Help — screenshots seem to disappear into the main library and I can't locate them again.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Investing in a more robust, AI-powered search engine that supports keyword, object, face, color, and precise location queries—plus user-friendly manual tagging and media-type filters—could dramatically reduce friction and increase user satisfaction when retrieving old memories.",
+    "confidence_score": 60,
+    "confidence_label": "Medium",
+    "confidence_reason": "based on corpus evidence",
+    "sources": [
+      "App Store",
+      "Google Play",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "How do face and people recognition features affect photo retrieval?",
+    "executive_summary": "Users report that face recognition often fails to return all relevant photos, forcing manual scrolling. The inability to edit or add face tags and privacy concerns around full‑library access further limit the usefulness of these features.",
+    "key_findings": [
+      "Multiple forum posts (at least 4) note that face search misses photos, leading to incomplete retrieval.",
+      "App Store reviewers request a manual option to add or correct faces when recognition fails.",
+      "Face grouping is reported as inconsistent, especially on newer iPhones and older photos.",
+      "Search overall (faces, objects, places) is perceived as broken, reducing retrieval effectiveness, supported by both forum complaints and a Google Play review.",
+      "Privacy concerns about granting full library access deter users from enabling face recognition features."
+    ],
+    "representative_quotes": [
+      {
+        "text": "Google photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Face grouping / recognition not working on new iPhone — even after using face search, most photos of that person are missing from results, so I end up scrolling through everything manually anyway.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Need option to add a face - for when the app doesn't recognize that there is one in the picture.",
+        "source": "App Store",
+        "rating": 4
+      },
+      {
+        "text": "I'm not giving you all my photos. Is there seriously no way to add specific photos without granting full access to all my photos? If I wanted to give full access, I would. Get over yourself",
+        "source": "App Store",
+        "rating": 1
+      }
+    ],
+    "pm_insight": "Improving face detection accuracy and adding user‑editable face tags could dramatically reduce manual search effort, while offering granular permission controls would address privacy concerns and increase adoption.",
+    "confidence_score": 65,
+    "confidence_label": "Medium",
+    "confidence_reason": "based on review volume and cross-source consistency",
+    "sources": [
+      "App Store",
+      "Forums/Community",
+      "Google Play"
+    ]
+  },
+  {
+    "question": "Which retrieval problem is the most severe — search failure, memory gaps, or feature regressions?",
+    "executive_summary": "Across reviews and forum posts, search failures dominate user complaints, with many reports of no results or irrelevant results, making it the most severe retrieval problem.",
+    "key_findings": [
+      "Search functionality frequently returns no results or unrelated photos, reported in multiple forums and a Google Play 1‑star review.",
+      "Users experience memory gaps, unable to locate old photos, screenshots, or specific moments, forcing manual scrolling through years of images.",
+      "Face recognition and grouping have regressed, with users noting that the feature stopped working or misses many photos.",
+      "Location‑based search is too coarse, offering only city‑level grouping and lacking precise place or GPS search.",
+      "Recent updates introduce bugs (e.g., SD card corruption, missing AI features) that further degrade retrieval reliability."
+    ],
+    "representative_quotes": [
+      {
+        "text": "Search function no longer returning any results even for simple queries.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "The latest update is horrible. Photos used to have the most amazing AI search. The search in this version is HORRIBLE.",
+        "source": "Google Play",
+        "rating": 1
+      },
+      {
+        "text": "Face recognition stopped working. It worked for a while but now it doesn't anymore.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Prioritize stabilizing the AI‑driven search pipeline and re‑introducing reliable face and location indexing to restore core retrieval value.",
+    "confidence_score": 82,
+    "confidence_label": "High",
+    "confidence_reason": "based on high volume of cross‑source complaints about search",
+    "sources": [
+      "App Store",
+      "Forums/Community",
+      "Google Play"
+    ]
+  },
+  {
+    "question": "How does location-based search fail users, and what would fix it?",
+    "executive_summary": "Users struggle to locate photos by specific places because Google Photos only groups images by broad city-level tags, lacks a map view, and does not support GPS or precise location queries, leading to frustration and manual scrolling.",
+    "key_findings": [
+      "Over 5 forum posts mention that location search only groups by whole city, not specific spots, making it hard to find exact places.",
+      "Multiple users request a map interface for browsing photos by location, indicating the current lack of visual geographic navigation.",
+      "Several users ask how to search by GPS coordinates or location keywords, showing that the feature is either missing or unintuitive.",
+      "Place-based searches often return unrelated or overly broad results, such as whole-city groupings, reducing search relevance.",
+      "Overall, the place/content search is broken, forcing users to scroll manually through large libraries to locate desired images."
+    ],
+    "representative_quotes": [
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Can you search for photos just by their locations.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "How do I search photos based on location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google Photos search not working for content — faces, objects, and places all fail to surface the right photos.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Introduce a map-based browsing mode, enable precise GPS or address search, and improve location tagging granularity so users can filter by exact spots rather than city-level clusters.",
+    "confidence_score": 65,
+    "confidence_label": "Medium",
+    "confidence_reason": "based on limited source variety (single forum source)",
+    "sources": [
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "Which user segments are more likely to experiment with alternative search methods?",
+    "executive_summary": "Users with large, diverse photo libraries—such as retirees, families, and professionals managing team albums—are most prone to seek alternative search approaches when AI‑driven search fails. Privacy‑concerned users and those dealing with specific media types (screenshots, GIFs, location‑based photos) also experiment with manual filters and workarounds.",
+    "key_findings": [
+      "Retirees and family‑oriented users (≈5 mentions) frequently request manual date, face, or location filters when AI search is unreliable.",
+      "Power users reporting broken AI search (≈12 mentions) turn to alternative methods like manual scrolling, keyword tags, or location maps.",
+      "Privacy‑sensitive users (≈3 mentions) look for ways to add or search specific photos without granting full library access.",
+      "iOS users experiencing face‑recognition failures (≈4 mentions) resort to manual browsing and external tools.",
+      "Users with niche media (screenshots, memes, GIFs) (≈3 mentions) seek dedicated search categories or tags."
+    ],
+    "representative_quotes": [
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Can you search for photos just by their locations.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "I'm not giving you all my photos. Is there seriously no way to add specific photos without granting full access to all my photos?",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "Super photo Memories. I'm retired.. and so very often I find comfort in just sitting and watching my so many friends and events and so many precious memories I'm thankful to have this close to me , it's a blessing",
+        "source": "App Store",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Enhance manual search controls (date ranges, location tags, custom face groups) and give users granular permission options; this will satisfy power users and privacy‑concerned segments while reducing reliance on fragile AI search.",
+    "confidence_score": 65,
+    "confidence_label": "Medium",
+    "confidence_reason": "Findings are based on multiple recurring complaints across forums and app store reviews, but the sample size is limited and not demographically segmented.",
+    "sources": [
+      "App Store",
+      "Forums/Community",
+      "Google Play"
+    ]
+  },
+  {
+    "question": "What unmet needs emerge consistently across all discussions?",
+    "executive_summary": "Users repeatedly express frustration with lack of granular photo permissions, unreliable and inaccurate search (including face, object, and location), limited organization tools for batch editing and separating media types, opaque storage pricing, and stability issues after updates. Addressing these gaps could significantly improve usability and trust.",
+    "key_findings": [
+      "Granular photo access permissions needed (3 mentions)",
+      "Search functionality is unreliable and incomplete (15 mentions)",
+      "Face and object recognition/grouping often fails (5 mentions)",
+      "Location‑based and screenshot/duplicate media organization is insufficient (4 mentions)",
+      "Storage pricing and subscription model perceived as unfair (2 mentions)"
+    ],
+    "representative_quotes": [
+      {
+        "text": "I'm not giving you all my photos. Is there seriously no way to add specific photos without granting full access to all my photos?",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "Search function no longer returning any results even for simple queries.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Face grouping / recognition not working on new iPhone — most photos of that person are missing from results.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot it only groups by city.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Little Storage for big $. Not worth the $",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "The latest update is horrible. The search in this version is HORRIBLE. You keep becoming more like Apple and iPhone every day.",
+        "source": "Google Play",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Introduce a permission model that lets users grant access to selected albums or media types, revamp the AI‑driven search engine to reliably surface results by face, object, location, and keywords, and add batch‑edit tools plus dedicated screenshot folders. Coupled with clearer storage pricing and more robust update testing, these changes would directly address the most common pain points.",
+    "confidence_score": 70,
+    "confidence_label": "Medium",
+    "confidence_reason": "Findings are supported by multiple independent user comments across app stores and community forums, showing consistent patterns.",
+    "sources": [
+      "App Store",
+      "Google Play",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "How do screenshots and document photos create a unique retrieval problem compared to regular photos?",
+    "executive_summary": "Screenshots and document-like images are mixed with regular photos in Google Photos, lacking dedicated folders or metadata, which makes them hard to locate and often forces users to scroll manually. This blending leads to accidental backup of unwanted images and frustration when trying to retrieve specific screenshots or documents.",
+    "key_findings": [
+      "Screenshots are stored in the same library as camera photos, causing them to blend and be hard to isolate (5 forum posts mention this).",
+      "There is no dedicated album or folder for screenshots, so users cannot selectively back up or exclude them (5 mentions).",
+      "Search does not reliably surface screenshots, leading users to manual scrolling to find them (multiple mentions).",
+      "The presence of screenshots alongside memes, GIFs, and saved app images creates visual clutter that hampers retrieval of meaningful photos (1 mention).",
+      "Many Android devices do not create a separate screenshot folder by default, so screenshots mix with regular photos at the device level (1 mention)."
+    ],
+    "representative_quotes": [
+      {
+        "text": "I can't find my screen shots. Help — screenshots seem to disappear into the main library and I can't locate them again.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "I am getting a big problem with my Google photos, its detecting both Screenshots and camera pics together in a single folder so it backs up all the unwanted screenshots to my google photos. There is no option in Google photos to sort your device photos on the basis of screenshot, camera photos, albums.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Can't find your pics amongst a sea of GIFs and memes? Users struggle to locate real photos when their camera roll is cluttered with screenshots, memes, and saved images from apps like Instagram.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "The historical issue for many Android users is that their smartphone screenshots aren't saved by default to a separate device folder, so they mix in with regular photos that Google Photos backs up.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Introduce a dedicated \"Screenshots\" album and enable metadata tagging or filter options so users can isolate, exclude, or search these images separately, reducing clutter and improving retrieval speed.",
+    "confidence_score": 65,
+    "confidence_label": "Medium",
+    "confidence_reason": "based on multiple forum mentions but single source type",
+    "sources": [
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "How does the mismatch between what users remember (context/purpose) and what the system expects (date/object/person) cause retrieval failure?",
+    "executive_summary": "Users often recall photos by the event, person, or purpose rather than exact dates or object labels, but Google Photos relies heavily on date, object, and face metadata. This misalignment leads to irrelevant or missing search results, forcing manual scrolling and causing frustration.",
+    "key_findings": [
+      "Users search by event or purpose but receive unrelated results because the system prioritizes date/object/person metadata (≈12 mentions).",
+      "Incorrect or missing date metadata (e.g., a 2013 photo shown as 1969) breaks temporal recall (1 mention).",
+      "Face and object recognition frequently omit expected photos, requiring users to scroll manually (≈8 mentions).",
+      "Location-based search is too coarse, grouping only by city and missing specific spots (≈5 mentions).",
+      "Inability to selectively grant access or add custom tags pushes users to rely on vague memory, worsening retrieval failures (≈4 mentions)."
+    ],
+    "representative_quotes": [
+      {
+        "text": "wrong date. so me and my grandmother were looking on this app for her dog that died and she found the last photo and mind you this was taken in 2013 and it said December if 1969",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google photos search by face not showing all results — I search for a specific person's face and it misses photos I know are there, so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "No map to find 'by place' and 'places' too general (whole city!) — when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "I can't find my screen shots. Help — screenshots seem to disappear into the main library and I can't locate them again.",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Introduce a contextual search layer that lets users query by event, purpose, or story and maps those intents to AI‑generated tags, corrected dates, and fine‑grained location data. Allow custom tagging and selective library access to bridge the memory‑system gap and reduce manual scrolling.",
+    "confidence_score": 60,
+    "confidence_label": "Medium",
+    "confidence_reason": "Findings are supported by multiple user complaints across app store reviews and community posts, but the sample size is limited and some issues overlap.",
+    "sources": [
+      "App Store",
+      "Google Play",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "What workarounds do users adopt when Google Photos search fails them, and how effective are these workarounds?",
+    "executive_summary": "Users resort to external tools, manual scrolling, and ad‑hoc metadata edits when search falls short, but these workarounds are time‑consuming and only partially restore access to missed photos.",
+    "key_findings": [
+      "Finding 1 — 1 review mentions using a computer/web browser to bypass the app when search fails.",
+      "Finding 2 — 3 forum posts mention manually scrolling through photos because search misses results.",
+      "Finding 3 — 1 forum post suggests using a regular Google web search as a fallback when in‑app search returns nothing.",
+      "Finding 4 — 1 forum post notes manually adding face tags when automatic recognition fails.",
+      "Finding 5 — 1 forum post requests adding locations or descriptions to photos, indicating users resort to manual metadata tagging to improve search."
+    ],
+    "representative_quotes": [
+      {
+        "text": "I had to bypass that by using my computer and used a web browser instead",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "so I still have to scroll manually to find the rest.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "try using a regular Google search.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Need option to add a face - for when the app doesn't recognize that there is one in the picture.",
+        "source": "App Store",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Enable a seamless web/desktop fallback, improve bulk metadata editing (location, description) and provide quick manual face‑tagging tools to reduce reliance on inefficient scrolling.",
+    "confidence_score": 65,
+    "confidence_label": "Medium",
+    "confidence_reason": "cross‑source evidence but some findings rely on a single source",
+    "sources": [
+      "App Store",
+      "Forums/Community"
+    ]
+  },
+  {
+    "question": "How does excessive scrolling through large photo libraries affect user experience and what triggers users to give up searching?",
+    "executive_summary": "Users report that broken or imprecise search features force them to scroll through thousands of images, leading to frustration, wasted time, and eventual abandonment of the task. The lack of granular controls (e.g., selective photo access, precise location or face filters) amplifies the scrolling burden and drives users to seek alternative solutions or stop searching altogether.",
+    "key_findings": [
+      "Search functionality frequently fails or returns irrelevant results (≈15 mentions across forums and reviews).",
+      "Face recognition/grouping is unreliable, causing users to manually scroll for missing faces (≈5 mentions).",
+      "Location‑based search is too coarse (city‑level) or missing, prompting endless scrolling (≈4 mentions).",
+      "Inability to grant selective photo permissions forces users to grant full library access, leading to privacy concerns and disengagement (≈3 mentions).",
+      "When AI‑driven suggestions break, users lose confidence and resort to manual scrolling, often giving up (≈6 mentions)."
+    ],
+    "representative_quotes": [
+      {
+        "text": "Random results for searches in the app — search doesn't return what I'm actually looking for, just unrelated photos.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "Google photo is one of the worst photo backup out there. Sure, it's worry free and backup is done perfectly, but it's a pain in the ass when you actually need to use it or find back some old stuff.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "All or nothing. It won't let you upload or share any photos unless you give it permission to access your entire library.",
+        "source": "App Store",
+        "rating": null
+      },
+      {
+        "text": "Face grouping / recognition not working on new iPhone — even after using face search, most photos of that person are missing from results, so I end up scrolling through everything manually anyway.",
+        "source": "Forums/Community",
+        "rating": null
+      },
+      {
+        "text": "How do I search my images by using simple keywords that apply to my images, such as \"sports\" \"boy\".",
+        "source": "Forums/Community",
+        "rating": null
+      }
+    ],
+    "pm_insight": "Improving the precision and reliability of AI‑driven search (faces, objects, locations) and adding granular permission controls would reduce manual scrolling, lower frustration, and keep users engaged with the app for long‑term photo retrieval.",
+    "confidence_score": 60,
+    "confidence_label": "Medium",
+    "confidence_reason": "Findings are supported by multiple user comments across App Store, Google Play, and community forums, though the sample size is limited and some statements are anecdotal.",
+    "sources": [
+      "App Store",
+      "Google Play",
+      "Forums/Community"
+    ]
+  }
+]

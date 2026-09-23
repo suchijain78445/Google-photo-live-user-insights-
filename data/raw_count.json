@@ -1,0 +1,17 @@
+{
+  "total": 499,
+  "by_source_file": {
+    "App Store (Reddit-shape)": 44,
+    "Combined Reviews (Community)": 39,
+    "Curated Pain Points (Community)": 14,
+    "Raw App Store Scrape (filtered)": 0,
+    "Google Play Scrape": 100,
+    "Research Dataset CSV": 302
+  },
+  "by_source_label": {
+    "App Store": 212,
+    "Forums/Community": 53,
+    "Google Play": 100,
+    "Research Dataset": 134
+  }
+}

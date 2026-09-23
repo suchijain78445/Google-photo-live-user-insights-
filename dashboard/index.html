@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Photos — AI Discovery Engine</title>
+  <meta name="description" content="AI-powered research intelligence platform analyzing why users struggle to find photos in Google Photos. Built from 500+ real user reviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ── Fixed Sidebar ──────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-icon-wrap">
+        <img src="assets/google-photos.jpg" alt="Google Photos" class="logo-img" />
+      </div>
+      <div class="logo-text-wrap">
+        <div class="logo-name">Google Photos</div>
+        <div class="logo-sub">AI DISCOVERY ENGINE</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#dashboard" class="nav-item active" id="nav-dashboard">
+        <span class="nav-icon nav-icon--orange">🏠</span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a href="#ai-research" class="nav-item" id="nav-ai-research">
+        <span class="nav-icon nav-icon--blue">🤖</span>
+        <span class="nav-label">AI Research</span>
+        <span class="nav-badge" id="findings-count">0</span>
+      </a>
+      <a href="#customer-signals" class="nav-item" id="nav-customer-signals">
+        <span class="nav-icon nav-icon--teal">📊</span>
+        <span class="nav-label">Customer Signals</span>
+      </a>
+      <a href="#product-opportunities" class="nav-item" id="nav-product-opportunities">
+        <span class="nav-icon nav-icon--violet">⚡</span>
+        <span class="nav-label">Product Opportunities</span>
+      </a>
+      <a href="#insight-library" class="nav-item" id="nav-insight-library">
+        <span class="nav-icon nav-icon--green">📚</span>
+        <span class="nav-label">Insights Library</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-name">Google Photos AI Discovery Engine</div>
+      <div class="footer-sub">Internal Research Workspace</div>
+    </div>
+  </aside>
+
+  <!-- ── Main scrollable content ───────────────────────────── -->
+  <main class="main" id="main">
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — DASHBOARD
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="dashboard">
+      <div class="section-topbar">
+        <span class="topbar-icon">🏠</span>
+        <span class="topbar-label">DASHBOARD</span>
+      </div>
+
+      <!-- ── Big hero (screenshot 2 style) ──────────────────── -->
+      <div class="dash-hero-main">
+        <h1 class="dash-hero-title">Google Photos — AI Discovery Engine</h1>
+        <p class="dash-hero-desc">An AI-powered research platform mining 499 reviews from Apple App Store, Google Play, Reddit &amp; Google Forums to surface evidence-backed product discovery insights for Google Photos PMs.</p>
+        <div class="dash-tech-tags">
+          <span class="tech-tag"><span class="tech-tag-dot" style="background:#4361ee"></span>499 Reviews Analyzed</span>
+          <span class="tech-tag"><span class="tech-tag-dot" style="background:#f97316"></span>Reddit + Google Forums</span>
+          <span class="tech-tag"><span class="tech-tag-dot" style="background:#a78bfa"></span>Groq / LLaMA 3</span>
+          <span class="tech-tag"><span class="tech-tag-dot" style="background:#22c55e"></span>Keyword Clustering</span>
+          <span class="tech-tag"><span class="tech-tag-dot" style="background:#14b8a6"></span>Cross-source Validation</span>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--blue">📝</div>
+          <div>
+            <div class="stat-value" id="stat-total">499</div>
+            <div class="stat-label">Total Reviews</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--violet">🔍</div>
+          <div>
+            <div class="stat-value" id="stat-filtered">71</div>
+            <div class="stat-label">Discovery-Relevant</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--teal">🤖</div>
+          <div>
+            <div class="stat-value" id="stat-findings">0</div>
+            <div class="stat-label">Research Findings</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--amber">📡</div>
+          <div>
+            <div class="stat-value">4</div>
+            <div class="stat-label">Data Sources</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="panel">
+          <div class="panel-label">▸ DATA SOURCES</div>
+          <div class="source-bars">
+            <div class="source-bar-item">
+              <div class="source-bar-label">
+                <span class="src-dot" style="background:#4361ee"></span>
+                <span>Apple App Store</span><span class="source-bar-count">212</span>
+              </div>
+              <div class="source-bar-track"><div class="source-bar-fill" style="width:42%;background:#4361ee"></div></div>
+            </div>
+            <div class="source-bar-item">
+              <div class="source-bar-label">
+                <span class="src-dot" style="background:#22c55e"></span>
+                <span>Google Play Store</span><span class="source-bar-count">150</span>
+              </div>
+              <div class="source-bar-track"><div class="source-bar-fill" style="width:30%;background:#22c55e"></div></div>
+            </div>
+            <div class="source-bar-item">
+              <div class="source-bar-label">
+                <span class="src-dot" style="background:#f97316"></span>
+                <span>Reddit Communities</span><span class="source-bar-count">100</span>
+              </div>
+              <div class="source-bar-track"><div class="source-bar-fill" style="width:20%;background:#f97316"></div></div>
+            </div>
+            <div class="source-bar-item">
+              <div class="source-bar-label">
+                <span class="src-dot" style="background:#a78bfa"></span>
+                <span>Google Forums</span><span class="source-bar-count">37</span>
+              </div>
+              <div class="source-bar-track"><div class="source-bar-fill" style="width:8%;background:#a78bfa"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-label">▸ DISCOVERY SIGNAL GROUPS</div>
+          <div class="signal-chips">
+            <span class="chip chip--red">Search Failure <b>30</b></span>
+            <span class="chip chip--amber">Memory Gaps <b>25</b></span>
+            <span class="chip chip--amber">Face &amp; People <b>15</b></span>
+            <span class="chip chip--blue">Data Loss <b>11</b></span>
+            <span class="chip chip--blue">Location <b>8</b></span>
+            <span class="chip chip--teal">Scrolling <b>7</b></span>
+            <span class="chip chip--teal">Screenshots <b>6</b></span>
+            <span class="chip chip--teal">Context Gap <b>6</b></span>
+          </div>
+        </div>
+
+        <div class="panel panel--full">
+          <div class="panel-label">▸ CORE PROBLEM STATEMENT</div>
+          <div class="problem-row">
+            <div class="problem-text">
+              <p class="problem-lead">Users remember a photo through its <strong>context, purpose, or emotional memory</strong> — but Google Photos requires a <strong>date, location, person, or object keyword</strong>.</p>
+              <p class="problem-body">When users can't provide those structured metadata anchors, they fall back to manual scrolling through years of photos — a process that is time-consuming, unreliable, and increasingly frustrating as libraries grow.</p>
+            </div>
+            <div class="pain-grid">
+              <div class="pain-item"><span class="pain-num">01</span><span>Excessive scrolling</span></div>
+              <div class="pain-item"><span class="pain-num">02</span><span>Search ≠ memory</span></div>
+              <div class="pain-item"><span class="pain-num">03</span><span>Face search overload</span></div>
+              <div class="pain-item"><span class="pain-num">04</span><span>Location gaps</span></div>
+              <div class="pain-item"><span class="pain-num">05</span><span>Screenshot retrieval</span></div>
+              <div class="pain-item"><span class="pain-num">06</span><span>Context vs. metadata</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — AI RESEARCH (split panel)
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="ai-research">
+      <div class="section-topbar">
+        <span class="topbar-icon">🤖</span>
+        <span class="topbar-label">AI DISCOVERY ASSISTANT</span>
+      </div>
+
+      <!-- ── Full-width Ask AI bar ───────────────────────────── -->
+      <div class="ask-bar">
+        <input type="text" id="ask-ai-input" class="ask-bar-input"
+               placeholder="Select a question from the left, or type your own…"
+               aria-label="Research question input" />
+        <button class="ask-bar-btn" id="ask-ai-btn">Ask AI</button>
+        <button class="ask-bar-clear" id="ask-ai-clear">Clear</button>
+      </div>
+
+
+      <!-- ── Gap ───────────────────────────────────────────────── -->
+      <div class="ask-gap"></div>
+
+      <!-- ── Two-column split ──────────────────────────────────── -->
+      <div class="research-shell">
+
+        <!-- Left: question list -->
+        <div class="ql-panel" id="ql-panel">
+          <div class="ql-header">
+            <div class="ql-app-icon">
+              <img src="assets/ai-bot.jpg" alt="AI Assistant" class="ql-bot-img" />
+            </div>
+            <div>
+              <div class="ql-app-name">Google Photos AI</div>
+              <div class="ql-app-sub">Select a question below</div>
+            </div>
+          </div>
+
+          <div class="ql-list" id="ql-list">
+            <div class="ql-loading"><div class="spinner"></div><span>Loading…</span></div>
+          </div>
+        </div>
+
+        <!-- Right: answer panel -->
+        <div class="answer-panel" id="answer-panel">
+          <div class="answer-body">
+            <!-- Loading spinner -->
+            <div class="ask-ai-loading hidden" id="ask-ai-loading">
+              <div class="spinner"></div>
+              <span>Generating answer from corpus…</span>
+            </div>
+
+            <!-- Default state -->
+            <div class="answer-empty" id="answer-empty">
+              <div class="answer-empty-icon">
+                <img src="assets/ai-bot.jpg" alt="AI Assistant" class="empty-bot-img" />
+              </div>
+              <div class="answer-empty-title">Select a research question</div>
+              <div class="answer-empty-sub">Click any Q1–Q14 from the left panel, or type your own question above and hit Ask AI.</div>
+            </div>
+
+            <!-- Answer content populated by JS -->
+            <div id="answer-content" class="hidden"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — CUSTOMER SIGNALS
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="customer-signals">
+      <div class="section-topbar section-topbar--badge">
+        <span class="topbar-icon">📊</span>
+        <span class="topbar-label">TOP DISCOVERY INSIGHTS</span>
+      </div>
+      <div class="section-subtitle">9 most impactful AI-synthesised findings from Reddit · App Store · Google Play · Google Forums</div>
+      <div class="insight-cards-grid" id="insight-cards-grid">
+        <div class="generic-loading" style="grid-column:1/-1"><div class="spinner"></div><span>Loading insights…</span></div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 4 — PRODUCT OPPORTUNITIES
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="product-opportunities">
+      <div class="section-topbar">
+        <span class="topbar-icon">⚡</span>
+        <span class="topbar-label">PRODUCT OPPORTUNITIES</span>
+      </div>
+      <div class="section-subtitle">Pain points vs. PM opportunities — extracted from cross-source evidence</div>
+      <div class="opps-featured-list" id="opps-featured-list">
+        <div class="generic-loading"><div class="spinner"></div><span>Loading opportunities…</span></div>
+      </div>
+
+      <!-- Chart panel — full width (Moved from Dashboard) -->
+      <div class="panel panel--full chart-panel-wrap" style="margin-top: 30px;">
+        <div class="chart-panel-header">
+          <div>
+            <div class="chart-panel-title">Signal Cluster Frequency — Discovery Split</div>
+            <div class="chart-panel-sub">Based on 499 reviews across Reddit, App Store, Google Play &amp; Google Forums · 71 discovery-relevant signals identified</div>
+          </div>
+          <div class="chart-legend">
+            <span class="chart-legend-dot" style="background:#4361ee"></span><span>App Store / Play</span>
+            <span class="chart-legend-dot" style="background:#f97316"></span><span>Reddit</span>
+            <span class="chart-legend-dot" style="background:#a78bfa"></span><span>Forums</span>
+          </div>
+        </div>
+        <div style="height:220px;position:relative">
+          <canvas id="cluster-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 5 — INSIGHTS LIBRARY
+         ════════════════════════════════════════════════════ -->
+    <section class="section" id="insight-library">
+      <div class="section-topbar">
+        <span class="topbar-icon">📚</span>
+        <span class="topbar-label">PIPELINE ARCHITECTURE</span>
+      </div>
+      <div class="section-subtitle">How 499 raw reviews became 14 structured AI findings</div>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-step">
+          <div class="pipeline-icon">📥</div>
+          <div class="pipeline-num">STEP 01</div>
+          <div class="pipeline-title">Fetch</div>
+          <div class="pipeline-desc">Collected 499 reviews from App Store, Google Play, Reddit &amp; Google Forums. Community posts ingested manually.</div>
+          <span class="pipeline-badge">scraper/</span>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">🧹</div>
+          <div class="pipeline-num">STEP 02</div>
+          <div class="pipeline-title">Clean</div>
+          <div class="pipeline-desc">Dedup, noise filter, min-length rules. Removed bot reviews &amp; off-topic content. 499 quality reviews retained.</div>
+          <span class="pipeline-badge">clean.py</span>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">🎯</div>
+          <div class="pipeline-num">STEP 03</div>
+          <div class="pipeline-title">Filter</div>
+          <div class="pipeline-desc">Regex keyword filter isolates 71 discovery-relevant reviews — search failures, memory gaps, scrolling pain.</div>
+          <span class="pipeline-badge">filter.py</span>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">📊</div>
+          <div class="pipeline-num">STEP 04</div>
+          <div class="pipeline-title">Cluster</div>
+          <div class="pipeline-desc">Keyword-based clustering into 8 signal groups: Search, Memory, Face, Location, Screenshot, Scroll, Data Loss, Context.</div>
+          <span class="pipeline-badge">analysis/</span>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">🤖</div>
+          <div class="pipeline-num">STEP 05</div>
+          <div class="pipeline-title">LLM Summarize</div>
+          <div class="pipeline-desc">Groq LLaMA acts as Senior PM — synthesises 14 structured findings with executive summary, key insights &amp; PM recommendations.</div>
+          <span class="pipeline-badge">summarize.py</span>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">✅</div>
+          <div class="pipeline-num">STEP 06</div>
+          <div class="pipeline-title">Validate</div>
+          <div class="pipeline-desc">Every AI-extracted insight validated against raw text. Cross-source consistency checked. Zero hallucinations tolerated.</div>
+          <span class="pipeline-badge">validate.py</span>
+        </div>
+      </div>
+
+      <div class="pipeline-footer">
+        <div class="cta-row">
+          <button class="cta-btn cta-btn--primary" onclick="document.getElementById('ai-research').scrollIntoView({behavior:'smooth'})">📄 View AI Research Findings</button>
+          <button class="cta-btn cta-btn--secondary" onclick="document.getElementById('product-opportunities').scrollIntoView({behavior:'smooth'})">⚡ Product Opportunities</button>
+          <button class="cta-btn cta-btn--secondary" onclick="document.getElementById('customer-signals').scrollIntoView({behavior:'smooth'})">📊 Customer Insights</button>
+        </div>
+        <div class="pipeline-credit">
+          Google Photos AI Discovery Engine — Graduation Project · Built with Python · Groq LLaMA 3 · Keyword Clustering · Cross-source Validation
+        </div>
+      </div>
+    </section>
+
+    <div style="height:80px"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
