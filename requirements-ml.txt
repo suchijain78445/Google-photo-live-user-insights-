@@ -1,0 +1,10 @@
+sentence-transformers==2.7.0
+scikit-learn==1.5.2
+anthropic==0.34.2
+python-dotenv==1.0.1
+pandas==2.2.3
+numpy==1.26.4
+torch==2.4.1
+transformers==4.44.2
+tqdm==4.66.5
+pytest==8.3.3
