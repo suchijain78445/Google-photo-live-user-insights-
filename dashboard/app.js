@@ -61,7 +61,9 @@ async function loadFindings() {
   try {
     const res = await fetch('findings.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    findings = await res.json();
+    const text = await res.text();
+    if (text.trim().startsWith('<')) throw new Error("Received HTML instead of JSON (Routing Error)");
+    findings = JSON.parse(text);
 
     const count = findings.filter(f => f.key_findings?.length).length;
     document.getElementById('findings-count').textContent  = count;
@@ -78,6 +80,11 @@ async function loadFindings() {
     if (findings.length > 0) selectFinding(0);
 
   } catch (err) {
+    document.getElementById('findings-count').textContent  = "Err";
+    document.getElementById('stat-findings').textContent   = "Err";
+    const dfEl = document.getElementById('dataset-findings');
+    if (dfEl) dfEl.textContent = "Err";
+
     document.getElementById('ql-list').innerHTML =
       `<div style="padding:16px;color:#fca5a5;font-size:.75rem">
          Could not load findings.json<br>
