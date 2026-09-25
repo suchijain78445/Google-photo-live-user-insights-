@@ -221,12 +221,52 @@ function renderAnswerPanel(finding) {
 }
 
 function buildAnswerHTML(f) {
+  const hasNoEvidence = 
+    f.confidence_score === 0 || 
+    !f.key_findings || f.key_findings.length === 0 || 
+    !f.sources || f.sources.length === 0;
+
   const keyItems   = (f.key_findings || []).map(kf =>
     `<li>${escHtml(kf)}</li>`).join('');
   const quotes     = (f.representative_quotes || []).map(q =>
     buildQuoteCard(q)).join('');
   const sourceTags = (f.sources || []).map(s =>
     `<span class="ans-source-tag">${escHtml(s)}</span>`).join('');
+
+  if (hasNoEvidence) {
+    return `
+      <!-- Research question card -->
+      <div class="ans-rq-card">
+        <img src="assets/ai-bot.jpg" alt="AI" class="ans-rq-bot" />
+        <div class="ans-rq-inner">
+          <div class="ans-rq-label">Research Question</div>
+          <div class="ans-rq-question">${escHtml(f.question || '')}</div>
+        </div>
+      </div>
+
+      <div class="ans-block" style="margin-top: 16px;">
+        <div class="ans-summary-box" style="border-left-color: #ef4444; color: #fca5a5;">
+          No direct evidence found in the current dataset for this question. This may indicate a gap in what the extraction pipeline captured, not a confirmed absence of the underlying user behavior.
+        </div>
+      </div>
+
+      <!-- Footer: confidence bar only -->
+      <div class="ans-footer">
+        <div class="ans-footer-row" style="margin-bottom:0">
+          <div class="ans-confidence">
+            <div class="ans-confidence-val" style="color:#ef4444;">0%</div>
+            <div class="ans-confidence-text">
+              <span class="ans-confidence-label">Confidence</span>
+              <span class="ans-confidence-reason">Zero matching extracted records</span>
+            </div>
+          </div>
+        </div>
+        <div class="ans-confidence-bar">
+          <div class="ans-confidence-bar-fill" style="width:0; background:#ef4444;"></div>
+        </div>
+      </div>
+    `;
+  }
 
   return `
     <!-- Research question card -->
@@ -236,7 +276,6 @@ function buildAnswerHTML(f) {
         <div class="ans-rq-label">Research Question</div>
         <div class="ans-rq-question">${escHtml(f.question || '')}</div>
       </div>
-      ${f.confidence_score === 0 ? `<div class="ans-source-tag" style="background:rgba(220, 38, 38, 0.2); color:#ef4444; border:1px solid rgba(220, 38, 38, 0.3); margin-left:auto; align-self:center;">No Evidence Found</div>` : ''}
     </div>
 
     ${f.executive_summary ? `
@@ -537,8 +576,38 @@ async function renderOpportunities() {
   }
 }
 
-// ── Insight Library replaced by static Pipeline HTML ──────────
-function renderLibrary() { /* Pipeline architecture rendered in HTML */ }
+// ── Top Discovery Insights (Customer Signals) ──────────
+function renderLibrary() {
+  const grid = document.getElementById('insight-cards-grid');
+  if (!grid) return;
+  
+  if (!findings || findings.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1; padding: 20px; color: var(--text-muted);">No insights data found.</div>';
+    return;
+  }
+  
+  grid.innerHTML = '';
+  findings.slice(0, 9).forEach((f, i) => {
+    const card = document.createElement('div');
+    card.className = 'insight-card';
+    
+    // Pick the first top quote or a fallback
+    const quoteObj = (f.representative_quotes && f.representative_quotes.length > 0) 
+        ? f.representative_quotes[0] 
+        : { text: "No quote available.", source: "Unknown" };
+        
+    card.innerHTML = `
+      <div class="insight-card-qnum">FINDING ${i + 1}</div>
+      <div class="insight-card-summary">${escHtml(f.executive_summary || f.question || 'No summary provided')}</div>
+      <div class="insight-card-quote">"${escHtml(quoteObj.text.substring(0, 150))}${quoteObj.text.length > 150 ? '...' : ''}"</div>
+      <div class="insight-card-footer">
+        <span class="insight-badge">${escHtml(quoteObj.source || 'Community')}</span>
+        <button class="view-evidence-btn" onclick="selectFinding(${i}); document.getElementById('ai-research').scrollIntoView({behavior: 'smooth'})">View Details →</button>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
 
 // ── Chart ─────────────────────────────────────────────────────
 let chartInstance = null;
