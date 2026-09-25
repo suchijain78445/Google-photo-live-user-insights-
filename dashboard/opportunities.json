@@ -1,24 +1,378 @@
-﻿[
-    {
-        "severity_multiplier":  3,
-        "problem_pair":  "exact_date + zero_results",
-        "opportunity_score":  36,
-        "missing_anchor":  "exact_date",
-        "frequency":  12,
-        "top_quotes":  [
-
-                       ],
-        "failure_point":  "zero_results"
-    },
-    {
-        "severity_multiplier":  2,
-        "problem_pair":  "exact_location + too_many_results",
-        "opportunity_score":  16,
-        "missing_anchor":  "exact_location",
-        "frequency":  8,
-        "top_quotes":  [
-
-                       ],
-        "failure_point":  "too_many_results"
-    }
+[
+  {
+    "problem_pair": "exact_date + wrong_results",
+    "missing_anchor": "exact_date",
+    "failure_point": "wrong_results",
+    "frequency": 5,
+    "severity_multiplier": 2,
+    "opportunity_score": 10,
+    "top_quotes": [
+      {
+        "review_id": "as_14558771493",
+        "quote": "wrong date",
+        "source": "App Store",
+        "user_segment": "casual_small_library"
+      },
+      {
+        "review_id": "combined_8",
+        "quote": "Face recognition/face grouping not working for older photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_9",
+        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_location + wrong_results",
+    "missing_anchor": "exact_location",
+    "failure_point": "wrong_results",
+    "frequency": 5,
+    "severity_multiplier": 2,
+    "opportunity_score": 10,
+    "top_quotes": [
+      {
+        "review_id": "as_14558771493",
+        "quote": "wrong date",
+        "source": "App Store",
+        "user_segment": "casual_small_library"
+      },
+      {
+        "review_id": "combined_8",
+        "quote": "Face recognition/face grouping not working for older photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_9",
+        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "filename + wrong_results",
+    "missing_anchor": "filename",
+    "failure_point": "wrong_results",
+    "frequency": 5,
+    "severity_multiplier": 2,
+    "opportunity_score": 10,
+    "top_quotes": [
+      {
+        "review_id": "as_14558771493",
+        "quote": "wrong date",
+        "source": "App Store",
+        "user_segment": "casual_small_library"
+      },
+      {
+        "review_id": "combined_8",
+        "quote": "Face recognition/face grouping not working for older photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_9",
+        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "album_name + wrong_results",
+    "missing_anchor": "album_name",
+    "failure_point": "wrong_results",
+    "frequency": 5,
+    "severity_multiplier": 2,
+    "opportunity_score": 10,
+    "top_quotes": [
+      {
+        "review_id": "as_14558771493",
+        "quote": "wrong date",
+        "source": "App Store",
+        "user_segment": "casual_small_library"
+      },
+      {
+        "review_id": "combined_8",
+        "quote": "Face recognition/face grouping not working for older photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_9",
+        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_date + zero_results",
+    "missing_anchor": "exact_date",
+    "failure_point": "zero_results",
+    "frequency": 3,
+    "severity_multiplier": 3,
+    "opportunity_score": 9,
+    "top_quotes": [
+      {
+        "review_id": "combined_18",
+        "quote": "scrolling through years of photos one by one is the only option left",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_29",
+        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_5",
+        "quote": "Now nothing happens",
+        "source": "Forums/Community",
+        "user_segment": "casual_small_library"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_location + zero_results",
+    "missing_anchor": "exact_location",
+    "failure_point": "zero_results",
+    "frequency": 3,
+    "severity_multiplier": 3,
+    "opportunity_score": 9,
+    "top_quotes": [
+      {
+        "review_id": "combined_18",
+        "quote": "scrolling through years of photos one by one is the only option left",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_29",
+        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_5",
+        "quote": "Now nothing happens",
+        "source": "Forums/Community",
+        "user_segment": "casual_small_library"
+      }
+    ]
+  },
+  {
+    "problem_pair": "filename + zero_results",
+    "missing_anchor": "filename",
+    "failure_point": "zero_results",
+    "frequency": 3,
+    "severity_multiplier": 3,
+    "opportunity_score": 9,
+    "top_quotes": [
+      {
+        "review_id": "combined_18",
+        "quote": "scrolling through years of photos one by one is the only option left",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_29",
+        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_5",
+        "quote": "Now nothing happens",
+        "source": "Forums/Community",
+        "user_segment": "casual_small_library"
+      }
+    ]
+  },
+  {
+    "problem_pair": "album_name + zero_results",
+    "missing_anchor": "album_name",
+    "failure_point": "zero_results",
+    "frequency": 3,
+    "severity_multiplier": 3,
+    "opportunity_score": 9,
+    "top_quotes": [
+      {
+        "review_id": "combined_18",
+        "quote": "scrolling through years of photos one by one is the only option left",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "combined_29",
+        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_5",
+        "quote": "Now nothing happens",
+        "source": "Forums/Community",
+        "user_segment": "casual_small_library"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_date + too_many_results",
+    "missing_anchor": "exact_date",
+    "failure_point": "too_many_results",
+    "frequency": 2,
+    "severity_multiplier": 2,
+    "opportunity_score": 4,
+    "top_quotes": [
+      {
+        "review_id": "combined_21",
+        "quote": "scrolling and scrolling in frustration",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_14",
+        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_location + too_many_results",
+    "missing_anchor": "exact_location",
+    "failure_point": "too_many_results",
+    "frequency": 2,
+    "severity_multiplier": 2,
+    "opportunity_score": 4,
+    "top_quotes": [
+      {
+        "review_id": "combined_21",
+        "quote": "scrolling and scrolling in frustration",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_14",
+        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "filename + too_many_results",
+    "missing_anchor": "filename",
+    "failure_point": "too_many_results",
+    "frequency": 2,
+    "severity_multiplier": 2,
+    "opportunity_score": 4,
+    "top_quotes": [
+      {
+        "review_id": "combined_21",
+        "quote": "scrolling and scrolling in frustration",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_14",
+        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "album_name + too_many_results",
+    "missing_anchor": "album_name",
+    "failure_point": "too_many_results",
+    "frequency": 2,
+    "severity_multiplier": 2,
+    "opportunity_score": 4,
+    "top_quotes": [
+      {
+        "review_id": "combined_21",
+        "quote": "scrolling and scrolling in frustration",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      },
+      {
+        "review_id": "curated_14",
+        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_date + no_nl_support",
+    "missing_anchor": "exact_date",
+    "failure_point": "no_nl_support",
+    "frequency": 1,
+    "severity_multiplier": 1,
+    "opportunity_score": 1,
+    "top_quotes": [
+      {
+        "review_id": "combined_27",
+        "quote": "Why can't I easily search through photos using a keyword?",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "exact_location + no_nl_support",
+    "missing_anchor": "exact_location",
+    "failure_point": "no_nl_support",
+    "frequency": 1,
+    "severity_multiplier": 1,
+    "opportunity_score": 1,
+    "top_quotes": [
+      {
+        "review_id": "combined_27",
+        "quote": "Why can't I easily search through photos using a keyword?",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "filename + no_nl_support",
+    "missing_anchor": "filename",
+    "failure_point": "no_nl_support",
+    "frequency": 1,
+    "severity_multiplier": 1,
+    "opportunity_score": 1,
+    "top_quotes": [
+      {
+        "review_id": "combined_27",
+        "quote": "Why can't I easily search through photos using a keyword?",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  },
+  {
+    "problem_pair": "album_name + no_nl_support",
+    "missing_anchor": "album_name",
+    "failure_point": "no_nl_support",
+    "frequency": 1,
+    "severity_multiplier": 1,
+    "opportunity_score": 1,
+    "top_quotes": [
+      {
+        "review_id": "combined_27",
+        "quote": "Why can't I easily search through photos using a keyword?",
+        "source": "Forums/Community",
+        "user_segment": "unclear"
+      }
+    ]
+  }
 ]

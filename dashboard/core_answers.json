@@ -1,27 +1,485 @@
-﻿{
-    "Q1_photo_types":  [
-                           {
-                               "category":  "screenshot",
-                               "top_quotes":  "",
-                               "count":  23
-                           },
-                           {
-                               "category":  "event",
-                               "top_quotes":  "",
-                               "count":  18
-                           }
-                       ],
-    "total_records":  71,
-    "Q2_anchors_present":  [
-                               {
-                                   "category":  "approx_time",
-                                   "top_quotes":  "",
-                                   "count":  45
-                               },
-                               {
-                                   "category":  "person_present",
-                                   "top_quotes":  "",
-                                   "count":  30
-                               }
-                           ]
+{
+  "Q1_photo_types": [
+    {
+      "category": "unknown",
+      "count": 54,
+      "top_quotes": [
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "people",
+      "count": 5,
+      "top_quotes": [
+        {
+          "review_id": "as_14551452277",
+          "quote": "My sister my best friend.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_6",
+          "quote": "Face recognition stopped working.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_8",
+          "quote": "Face recognition/face grouping not working for older photos.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "screenshot",
+      "count": 5,
+      "top_quotes": [
+        {
+          "review_id": "combined_13",
+          "quote": "I can't find my screen shots",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_14",
+          "quote": "detecting both Screenshots and camera pics together in a single folder",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_16",
+          "quote": "smartphone screenshots aren't saved by default",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "event",
+      "count": 1,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "pet",
+      "count": 1,
+      "top_quotes": [
+        {
+          "review_id": "as_14558771493",
+          "quote": "wrong date",
+          "source": "App Store",
+          "user_segment": "casual_small_library"
+        }
+      ]
+    },
+    {
+      "category": "document",
+      "count": 1,
+      "top_quotes": [
+        {
+          "review_id": "curated_5",
+          "quote": "Now nothing happens",
+          "source": "Forums/Community",
+          "user_segment": "casual_small_library"
+        }
+      ]
+    }
+  ],
+  "Q2_anchors_present": [
+    {
+      "category": "emotion_or_occasion",
+      "count": 23,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "activity",
+      "count": 15,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14558771493",
+          "quote": "wrong date",
+          "source": "App Store",
+          "user_segment": "casual_small_library"
+        }
+      ]
+    },
+    {
+      "category": "device_used",
+      "count": 10,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14549511694",
+          "quote": "Top shelf!",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "approx_time",
+      "count": 10,
+      "top_quotes": [
+        {
+          "review_id": "as_14558771493",
+          "quote": "wrong date",
+          "source": "App Store",
+          "user_segment": "casual_small_library"
+        },
+        {
+          "review_id": "combined_18",
+          "quote": "scrolling through years of photos one by one is the only option left",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_21",
+          "quote": "scrolling and scrolling in frustration",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "person_present",
+      "count": 5,
+      "top_quotes": [
+        {
+          "review_id": "as_14558771493",
+          "quote": "wrong date",
+          "source": "App Store",
+          "user_segment": "casual_small_library"
+        },
+        {
+          "review_id": "as_14551452277",
+          "quote": "My sister my best friend.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14548924513",
+          "quote": "Super photo Memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "location_description",
+      "count": 3,
+      "top_quotes": [
+        {
+          "review_id": "as_14546809331",
+          "quote": "So thankful when these lost memories appear",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_9",
+          "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "curated_14",
+          "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    }
+  ],
+  "Q3_anchors_missing": [
+    {
+      "category": "exact_date",
+      "count": 47,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "exact_location",
+      "count": 47,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "filename",
+      "count": 47,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "category": "album_name",
+      "count": 47,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561365212",
+          "quote": "Suck. No they want to charge for storage",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14561005810",
+          "quote": "Precious memories.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    }
+  ],
+  "Q4_search_behavior": [
+    {
+      "behavior": "unclear",
+      "total_count": 55,
+      "high_memory_count": 12,
+      "low_memory_count": 43,
+      "top_quotes": [
+        {
+          "review_id": "as_14561366050",
+          "quote": "Too intrusive.",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14549511694",
+          "quote": "Top shelf!",
+          "source": "App Store",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "behavior": "scrolled_manually",
+      "total_count": 4,
+      "high_memory_count": 3,
+      "low_memory_count": 1,
+      "top_quotes": [
+        {
+          "review_id": "as_14558771493",
+          "quote": "wrong date",
+          "source": "App Store",
+          "user_segment": "casual_small_library"
+        },
+        {
+          "review_id": "combined_21",
+          "quote": "scrolling and scrolling in frustration",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "curated_13",
+          "quote": "Face grouping / recognition not working on new iPhone",
+          "source": "Forums/Community",
+          "user_segment": "recovering_after_device_change"
+        }
+      ]
+    },
+    {
+      "behavior": "used_natural_language_query",
+      "total_count": 4,
+      "high_memory_count": 0,
+      "low_memory_count": 4,
+      "top_quotes": [
+        {
+          "review_id": "combined_2",
+          "quote": "Search function no longer returning any results even for simple queries.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_17",
+          "quote": "couldn't recall when it was taken",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_24",
+          "quote": "No search results using keywords in description field.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "behavior": "used_location_filter",
+      "total_count": 2,
+      "high_memory_count": 0,
+      "low_memory_count": 2,
+      "top_quotes": [
+        {
+          "review_id": "combined_9",
+          "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "curated_14",
+          "quote": "No map to find 'by place' and 'places' too general (whole city!)",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "behavior": "used_face_filter",
+      "total_count": 1,
+      "high_memory_count": 1,
+      "low_memory_count": 0,
+      "top_quotes": [
+        {
+          "review_id": "curated_3",
+          "quote": "search for a specific person's face and it misses photos I know are there",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        }
+      ]
+    },
+    {
+      "behavior": "gave_up",
+      "total_count": 1,
+      "high_memory_count": 1,
+      "low_memory_count": 0,
+      "top_quotes": [
+        {
+          "review_id": "curated_5",
+          "quote": "Now nothing happens",
+          "source": "Forums/Community",
+          "user_segment": "casual_small_library"
+        }
+      ]
+    }
+  ],
+  "total_records": 67
 }
