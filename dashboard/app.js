@@ -80,6 +80,7 @@ async function loadFindings() {
     if (findings.length > 0) selectFinding(0);
 
   } catch (err) {
+    console.error("Failed to load findings:", err);
     document.getElementById('findings-count').textContent  = "Err";
     document.getElementById('stat-findings').textContent   = "Err";
     const dfEl = document.getElementById('dataset-findings');
@@ -95,7 +96,7 @@ async function loadFindings() {
 
 async function loadFilteredRecords() {
   try {
-    const res = await fetch('../data/filtered.json');
+    const res = await fetch('filtered.json');
     if (!res.ok) throw new Error();
     filteredRecords = await res.json();
   } catch {
@@ -431,146 +432,119 @@ function renderSignals() {
   });
 }
 
+async function loadCoreAnswers() {
+  try {
+    const res = await fetch('core_answers.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    const getQuotesHtml = (items) => {
+      if (!items || !items.length) return '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
+      const topItem = items[0];
+      if (!topItem.top_quotes || !topItem.top_quotes.length) return '<div style="font-size: 0.85rem; color: #94a3b8;">No quotes available.</div>';
+      return topItem.top_quotes.map(q => 
+          `<div style="margin-bottom: 8px; font-size: 0.85rem; color: #94a3b8;"><strong>${escHtml(q.source || 'Unknown')}</strong>: "${escHtml(q.quote)}"</div>`
+      ).join('');
+    };
+
+    if (data.Q1_photo_types && data.Q1_photo_types.length) {
+      document.getElementById('q1-val').textContent = `${data.Q1_photo_types[0].category} (${data.Q1_photo_types[0].count})`;
+      document.getElementById('q1-quotes').innerHTML = getQuotesHtml(data.Q1_photo_types);
+    }
+    if (data.Q2_anchors_present && data.Q2_anchors_present.length) {
+      document.getElementById('q2-val').textContent = `${data.Q2_anchors_present[0].category} (${data.Q2_anchors_present[0].count})`;
+      document.getElementById('q2-quotes').innerHTML = getQuotesHtml(data.Q2_anchors_present);
+    }
+    if (data.Q3_anchors_missing && data.Q3_anchors_missing.length) {
+      document.getElementById('q3-val').textContent = `${data.Q3_anchors_missing[0].category} (${data.Q3_anchors_missing[0].count})`;
+      document.getElementById('q3-quotes').innerHTML = getQuotesHtml(data.Q3_anchors_missing);
+    }
+    if (data.Q4_search_behavior && data.Q4_search_behavior.length) {
+      document.getElementById('q4-val').textContent = `${data.Q4_search_behavior[0].behavior} (${data.Q4_search_behavior[0].total_count})`;
+      document.getElementById('q4-quotes').innerHTML = getQuotesHtml(data.Q4_search_behavior);
+    }
+  } catch (err) {
+    console.error("Failed to load core answers:", err);
+  }
+}
 
 // ── Product Opportunities ── Featured cards (screenshot 2 format) ─
-function renderOpportunities() {
+async function renderOpportunities() {
   const list = document.getElementById('opps-featured-list');
   if (!list) return;
 
-  const OPPS = [
-    {
-      icon: '🔍', iconBg: 'rgba(67,97,238,.15)', iconBorder: 'rgba(67,97,238,.3)',
-      title: 'Search & Retrieval Failures',
-      sub: 'Extracted from 30 discovery-relevant reviews · Apple App Store + Google Play Store',
-      pain: [
-        'Search requires exact date, location or object — contextual queries fail',
-        'Users cannot search by occasion, feeling or life event',
-        'Visual similarity returns irrelevant results for complex scenes',
-        'Searching "photos with [person]" misses many valid results',
-        '"What was that photo of..." yields no useful matches',
-      ],
-      pm: [
-        'Build semantic/contextual search powered by vision-language models',
-        'Add occasion-based retrieval ("birthday dinner last summer")',
-        'Surface proactive "you might be looking for" suggestions',
-        'Improve multi-person group photo detection and search',
-        'Support memory-lane retrieval by life events and emotions',
-      ],
-    },
-    {
-      icon: '🧠', iconBg: 'rgba(167,139,250,.15)', iconBorder: 'rgba(167,139,250,.3)',
-      title: 'Memory & Context Gaps',
-      sub: 'Extracted from 25 discovery-relevant reviews · Reddit Communities + Google Forums',
-      pain: [
-        'Cannot recall when or where a specific photo was taken',
-        'No way to search by mood, feeling or occasion type',
-        'Album organization is entirely manual and time-consuming',
-        'Important photos buried chronologically with no smart surfacing',
-        'Photos of similar events not auto-grouped by meaningful context',
-      ],
-      pm: [
-        'Auto-generate smart albums by detected life events and milestones',
-        'Add emotion and occasion AI-tagging for richer search hooks',
-        'Create "My Memories" with contextual grouping and storytelling',
-        'Proactively surface forgotten photos based on anniversary/context',
-        'Add life-chapter organization beyond simple chronology',
-      ],
-    },
-    {
-      icon: '👥', iconBg: 'rgba(20,184,166,.15)', iconBorder: 'rgba(20,184,166,.3)',
-      title: 'Face & People Discovery',
-      sub: 'Extracted from 15 discovery-relevant reviews · All Sources',
-      pain: [
-        'Face recognition groups wrong people together unexpectedly',
-        'Cannot search for "photos with my whole family" as a group',
-        'Unknown faces create cluttered ungrouped sections',
-        'Face recognition degrades for children aging over time',
-        'Pet and animal faces not supported in People search',
-      ],
-      pm: [
-        'Improve face recognition accuracy across age progressions',
-        'Add group/relationship-based search ("family trip", "school friends")',
-        'Support manual face labeling corrections with learning feedback',
-        'Extend face recognition to pets with user-defined naming',
-        'Enable family portrait detection and auto-album creation',
-      ],
-    },
-    {
-      icon: '📁', iconBg: 'rgba(245,158,11,.15)', iconBorder: 'rgba(245,158,11,.3)',
-      title: 'Content Organization & Loss',
-      sub: 'Extracted from 11 discovery-relevant reviews · All Sources',
-      pain: [
-        'Photos disappear after sync issues with no clear recovery path',
-        'Duplicate photos accumulate with no bulk management tool',
-        'Screenshots mixed indiscriminately with personal memories',
-        'Deleting from device removes cloud copy unexpectedly',
-        'Shared albums lose photos when contributors leave',
-      ],
-      pm: [
-        'Build a robust "Recently Lost" recovery flow with sync audit trail',
-        'Add smart duplicate detection and one-tap merge/delete',
-        'Create auto-segregated Screenshots and Documents folders',
-        'Clarify sync vs. backup semantics with clear user-facing controls',
-        'Persist shared album photos even after contributor removal',
-      ],
-    },
-  ];
-
-  list.innerHTML = '';
-  OPPS.forEach((opp, oi) => {
-    const allQuotes = findings.flatMap(f => f.representative_quotes || []);
-    const quotes = allQuotes.slice(oi * 3, oi * 3 + 3);
-    const quotesHTML = (quotes.length ? quotes : [{text:'No community quote available.',source:''}])
-      .map(q => `
-        <div class="opp-quote-item">
-          <div class="opp-quote-text">"${escHtml((q.text||'').substring(0,120))}"</div>
-          <div class="opp-quote-src">— ${escHtml(q.source||'')}</div>
-        </div>`).join('');
-
-    const painItems = opp.pain.map(p=>`<li>${escHtml(p)}</li>`).join('');
-    const pmItems   = opp.pm.map(p=>`<li>${escHtml(p)}</li>`).join('');
-
-    const card = document.createElement('div');
-    card.className = 'opp-card';
-    card.innerHTML = `
-      <div class="opp-card-header">
-        <div class="opp-card-icon" style="background:${opp.iconBg};border:1px solid ${opp.iconBorder}">${opp.icon}</div>
-        <div>
-          <div class="opp-card-title">${escHtml(opp.title)}</div>
-          <div class="opp-card-sub">${escHtml(opp.sub)}</div>
-        </div>
-      </div>
-      <div class="opp-card-body">
-        <div class="opp-pain-col">
-          <div class="opp-col-label">PAIN POINTS</div>
-          <ul class="opp-pain-list">${painItems}</ul>
-        </div>
-        <div class="opp-pm-col">
-          <div class="opp-col-label">PM OPPORTUNITIES</div>
-          <ul class="opp-pm-list">${pmItems}</ul>
-        </div>
-      </div>
-      <div class="opp-quotes-section">
-        <div class="opp-quotes-label">VERBATIM COMMUNITY QUOTES</div>
-        <div class="opp-quotes-grid">${quotesHTML}</div>
-      </div>`;
-    list.appendChild(card);
-  });
+  try {
+    const res = await fetch('opportunities.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const oppsData = await res.json();
+    
+    list.innerHTML = '';
+    oppsData.forEach((opp, oi) => {
+        const quotesHTML = (opp.top_quotes && opp.top_quotes.length ? opp.top_quotes : [{quote:'No quote available.',source:''}])
+          .map(q => `
+            <div class="opp-quote-item">
+              <div class="opp-quote-text">"${escHtml((q.quote||'').substring(0,120))}"</div>
+              <div class="opp-quote-src">— ${escHtml(q.source||'')}</div>
+            </div>`).join('');
+            
+        const title = opp.problem_pair.replace(/_/g, ' ').toUpperCase();
+        const sub = `Frequency: ${opp.frequency} · Severity: ${opp.severity_multiplier}x · Score: ${opp.opportunity_score}`;
+        const painItems = `<li>Missing Anchor: <strong>${escHtml(opp.missing_anchor)}</strong></li><li>Failure Point: <strong>${escHtml(opp.failure_point)}</strong></li>`;
+        const pmItems = `<li>Design to address users lacking <em>${escHtml(opp.missing_anchor)}</em></li><li>Mitigate risk of <em>${escHtml(opp.failure_point)}</em></li>`;
+        
+        const card = document.createElement('div');
+        card.className = 'opp-card';
+        card.innerHTML = `
+          <div class="opp-card-header">
+            <div class="opp-card-icon" style="background:rgba(67,97,238,.15);border:1px solid rgba(67,97,238,.3)">⚡</div>
+            <div>
+              <div class="opp-card-title">${escHtml(title)}</div>
+              <div class="opp-card-sub">${escHtml(sub)}</div>
+            </div>
+          </div>
+          <div class="opp-card-body">
+            <div class="opp-pain-col">
+              <div class="opp-col-label">PAIN POINTS</div>
+              <ul class="opp-pain-list">${painItems}</ul>
+            </div>
+            <div class="opp-pm-col">
+              <div class="opp-col-label">PM OPPORTUNITIES</div>
+              <ul class="opp-pm-list">${pmItems}</ul>
+            </div>
+          </div>
+          <div class="opp-quotes-section">
+            <div class="opp-quotes-label">VERBATIM COMMUNITY QUOTES</div>
+            <div class="opp-quotes-grid">${quotesHTML}</div>
+          </div>`;
+        list.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Failed to load opportunities:", err);
+    list.innerHTML = '<div class="generic-loading"><span>Failed to load opportunities.</span></div>';
+  }
 }
 
 // ── Insight Library replaced by static Pipeline HTML ──────────
 function renderLibrary() { /* Pipeline architecture rendered in HTML */ }
 
 // ── Chart ─────────────────────────────────────────────────────
-function initChart() {
+let chartInstance = null;
+function initChart(labelsOverride = null, countsOverride = null) {
   const canvas = document.getElementById('cluster-chart');
   if (!canvas || typeof Chart === 'undefined') return;
 
-  const labels = ['Search\nFailure','Memory\nGaps','Face &\nPeople','Data\nLoss','Location\nIssues','Scrolling','Screenshots','Context\nGap'];
-  const counts = [30, 25, 15, 11, 8, 7, 6, 6];
+  const labels = labelsOverride || ['Search\nFailure','Memory\nGaps','Face &\nPeople','Data\nLoss','Location\nIssues','Scrolling','Screenshots','Context\nGap'];
+  const counts = countsOverride || [30, 25, 15, 11, 8, 7, 6, 6];
   const bg     = ['#4361eecc','#7c3aedcc','#4361eecc','#0ea5e9cc','#f97316cc','#a78bfacc','#0ea5e9cc','#7c3aedcc'];
 
-  new Chart(canvas, {
+  if (chartInstance) {
+    chartInstance.data.labels = labels;
+    chartInstance.data.datasets[0].data = counts;
+    chartInstance.update();
+    return;
+  }
+
+  chartInstance = new Chart(canvas, {
     type: 'bar',
     data: {
       labels,
@@ -609,6 +583,88 @@ function initChart() {
   });
 }
 
+// ── Filter UI Logic ───────────────────────────────────────────
+function setupFilters() {
+  const pFilter = document.getElementById('filter-platform');
+  const tFilter = document.getElementById('filter-photo');
+  const sFilter = document.getElementById('filter-segment');
+
+  if (!pFilter || !tFilter || !sFilter) return;
+
+  const updateFilters = () => {
+    const pf = pFilter.value.toLowerCase();
+    const tf = tFilter.value.toLowerCase();
+    const sf = sFilter.value.toLowerCase();
+
+    // Just doing simple filtering for demonstration, and re-rendering the chart
+    // We will extract a count of keyword groups from the filtered records
+    const counts = {};
+    filteredRecords.forEach(r => {
+      let match = true;
+      if (pf !== 'all' && !(r.source || '').toLowerCase().includes(pf.replace('_',' '))) match = false;
+      // As photo_type and user_segment are absent in filteredRecords, we mock it by allowing match if missing
+      
+      if (match && r._keyword_groups) {
+        r._keyword_groups.forEach(g => {
+          counts[g] = (counts[g] || 0) + 1;
+        });
+      }
+    });
+
+    const sortedGroups = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0, 8);
+    if (sortedGroups.length > 0) {
+      initChart(sortedGroups.map(g => g[0].replace(/_/g, '\\n')), sortedGroups.map(g => g[1]));
+    } else {
+      initChart(['No Data'], [0]);
+    }
+    
+    // Re-render signal chips and source bars based on filtered subset
+    const chipsContainer = document.getElementById('signal-chips-container');
+    if (chipsContainer) {
+      chipsContainer.innerHTML = sortedGroups.map(g => {
+        const name = g[0].replace(/_/g, ' ');
+        // Alternate colors for aesthetic
+        const colorClass = ['chip--red', 'chip--amber', 'chip--blue', 'chip--teal'][Math.floor(Math.random() * 4)];
+        return `<span class="chip ${colorClass}">${escHtml(name)} <b>${g[1]}</b></span>`;
+      }).join('');
+    }
+
+    const sourceCounts = {};
+    filteredRecords.forEach(r => {
+      let match = true;
+      if (tf !== 'all') match = false; // mock since we don't have it
+      if (sf !== 'all') match = false; // mock since we don't have it
+      if (match && r.source) {
+        sourceCounts[r.source] = (sourceCounts[r.source] || 0) + 1;
+      }
+    });
+
+    const sourceBarsContainer = document.querySelector('.source-bars');
+    if (sourceBarsContainer) {
+      const colors = { 'App Store': '#4361ee', 'Google Play': '#22c55e', 'Reddit': '#f97316', 'Forums/Community': '#a78bfa' };
+      const total = Object.values(sourceCounts).reduce((a,b) => a+b, 0) || 1;
+      sourceBarsContainer.innerHTML = Object.entries(sourceCounts).sort((a,b)=>b[1]-a[1]).map(s => {
+        const name = s[0];
+        const count = s[1];
+        const color = colors[name] || '#94a3b8';
+        const pct = Math.round((count / total) * 100);
+        return `
+          <div class="source-bar-item">
+            <div class="source-bar-label">
+              <span class="src-dot" style="background:${color}"></span>
+              <span>${escHtml(name)}</span><span class="source-bar-count">${count}</span>
+            </div>
+            <div class="source-bar-track"><div class="source-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+          </div>`;
+      }).join('');
+    }
+  };
+
+  pFilter.addEventListener('change', updateFilters);
+  tFilter.addEventListener('change', updateFilters);
+  sFilter.addEventListener('change', updateFilters);
+}
+
 // ── Utility ───────────────────────────────────────────────────
 function escHtml(str) {
   return String(str || '')
@@ -620,6 +676,7 @@ function escHtml(str) {
 (async function init() {
   setupScrollSpy();
   initChart();
-  await Promise.all([loadFindings(), loadFilteredRecords()]);
+  setupFilters();
+  await Promise.all([loadFindings(), loadFilteredRecords(), loadCoreAnswers()]);
 })();
 
