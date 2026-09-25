@@ -270,73 +270,16 @@
     <div class="section-divider"></div>
 
     <!-- ══════════════════════════════════════════════════════
-         SECTION 4 — CORE RESEARCH QUESTIONS (Task 4)
-         ════════════════════════════════════════════════════ -->
-    <section class="section" id="core-research">
-      <div class="section-topbar section-topbar--badge">
-        <span class="topbar-icon">🧠</span>
-        <span class="topbar-label">CORE RESEARCH FINDINGS</span>
-      </div>
-      <div class="section-subtitle">Structured answers based on LLM attribute extraction from 71 discovery signals.</div>
-      
-      <!-- Segment Filters (Task 5) -->
-      <div style="margin-bottom: 24px; padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; display: flex; gap: 16px; align-items: center;">
-        <span style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Segment By:</span>
-        <select id="filter-platform" style="background: #0f172a; color: white; border: 1px solid #334155; padding: 6px 12px; border-radius: 4px; font-family: inherit;">
-          <option value="all">Platform: All</option>
-          <option value="app_store">App Store</option>
-          <option value="play_store">Play Store</option>
-          <option value="reddit">Reddit</option>
-          <option value="forums">Forums</option>
-        </select>
-        <select id="filter-segment" style="background: #0f172a; color: white; border: 1px solid #334155; padding: 6px 12px; border-radius: 4px; font-family: inherit;">
-          <option value="all">User Segment: All</option>
-          <option value="parent">Parent</option>
-          <option value="professional">Professional</option>
-          <option value="power_user_large_library">Power User</option>
-        </select>
-        <select id="filter-photo" style="background: #0f172a; color: white; border: 1px solid #334155; padding: 6px 12px; border-radius: 4px; font-family: inherit;">
-          <option value="all">Photo Type: All</option>
-          <option value="event">Event</option>
-          <option value="screenshot">Screenshot</option>
-          <option value="document">Document</option>
-          <option value="scanned_old_photo">Scanned Old Photo</option>
-        </select>
-      </div>
-
-      <div class="insight-cards-grid" id="core-answers-grid">
-        <div class="generic-loading" style="grid-column:1/-1"><div class="spinner"></div><span>Extracting attributes (this takes a few minutes)...</span></div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══════════════════════════════════════════════════════
-         SECTION 5 — PRODUCT OPPORTUNITIES (Task 6)
+         SECTION 4 — PRODUCT OPPORTUNITIES
          ════════════════════════════════════════════════════ -->
     <section class="section" id="product-opportunities">
       <div class="section-topbar">
         <span class="topbar-icon">⚡</span>
-        <span class="topbar-label">PRODUCT OPPORTUNITIES MATRIX</span>
+        <span class="topbar-label">PRODUCT OPPORTUNITIES</span>
       </div>
-      <div class="section-subtitle">Opportunities scored by Frequency × Severity (Gave Up / Zero Results).</div>
-      
-      <div class="panel panel--full" style="margin-top: 20px; overflow-x: auto;">
-        <table style="width: 100%; text-align: left; border-collapse: collapse; font-size: 0.9rem;">
-          <thead>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #94a3b8;">
-              <th style="padding: 12px; font-weight: 500;">Missing Anchor</th>
-              <th style="padding: 12px; font-weight: 500;">Failure Point</th>
-              <th style="padding: 12px; font-weight: 500;">Freq</th>
-              <th style="padding: 12px; font-weight: 500;">Severity</th>
-              <th style="padding: 12px; font-weight: 500;">Score</th>
-              <th style="padding: 12px; font-weight: 500;">Top Quote</th>
-            </tr>
-          </thead>
-          <tbody id="opps-table-body">
-            <tr><td colspan="6" style="padding: 24px; text-align: center; color: #64748b;">Computing Opportunity Matrix...</td></tr>
-          </tbody>
-        </table>
+      <div class="section-subtitle">Pain points vs. PM opportunities — extracted from cross-source evidence</div>
+      <div class="opps-featured-list" id="opps-featured-list">
+        <div class="generic-loading"><div class="spinner"></div><span>Loading opportunities…</span></div>
       </div>
 
       <!-- Chart panel — full width (Moved from Dashboard) -->
