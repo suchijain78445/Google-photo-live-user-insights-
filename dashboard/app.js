@@ -488,10 +488,22 @@ async function renderOpportunities() {
               <div class="opp-quote-src">— ${escHtml(q.source||'')}</div>
             </div>`).join('');
             
-        const title = opp.problem_pair.replace(/_/g, ' ').toUpperCase();
-        const sub = `Frequency: ${opp.frequency} · Severity: ${opp.severity_multiplier}x · Score: ${opp.opportunity_score}`;
-        const painItems = `<li>Missing Anchor: <strong>${escHtml(opp.missing_anchor)}</strong></li><li>Failure Point: <strong>${escHtml(opp.failure_point)}</strong></li>`;
-        const pmItems = `<li>Design to address users lacking <em>${escHtml(opp.missing_anchor)}</em></li><li>Mitigate risk of <em>${escHtml(opp.failure_point)}</em></li>`;
+        const title = opp.title || opp.problem_pair.replace(/_/g, ' ').toUpperCase();
+        const sub = opp.subtitle || `Frequency: ${opp.frequency} · Severity: ${opp.severity_multiplier}x · Score: ${opp.opportunity_score}`;
+        
+        let painItems = '';
+        if (opp.pain_points && opp.pain_points.length > 0) {
+            painItems = opp.pain_points.map(p => `<li>${escHtml(p)}</li>`).join('');
+        } else {
+            painItems = `<li>Missing Anchor: <strong>${escHtml(opp.missing_anchor)}</strong></li><li>Failure Point: <strong>${escHtml(opp.failure_point)}</strong></li>`;
+        }
+
+        let pmItems = '';
+        if (opp.pm_opportunities && opp.pm_opportunities.length > 0) {
+            pmItems = opp.pm_opportunities.map(p => `<li>${escHtml(p)}</li>`).join('');
+        } else {
+            pmItems = `<li>Design to address users lacking <em>${escHtml(opp.missing_anchor)}</em></li><li>Mitigate risk of <em>${escHtml(opp.failure_point)}</em></li>`;
+        }
         
         const card = document.createElement('div');
         card.className = 'opp-card';

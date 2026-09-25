@@ -1,324 +1,34 @@
 [
   {
-    "problem_pair": "exact_date + wrong_results",
-    "missing_anchor": "exact_date",
-    "failure_point": "wrong_results",
-    "frequency": 5,
-    "severity_multiplier": 2,
-    "opportunity_score": 10,
+    "title": "Semantic vs. Exact Metadata Search Gap",
+    "subtitle": "Extracted from 71 discovery clusters · High-severity drop-off when memory anchors are missing",
+    "pain_points": [
+      "Inability to search photos using conceptual or visual descriptions",
+      "Receiving entirely wrong results when users misremember the exact location or date",
+      "Forced to manually scroll through years of timeline grid to find a specific event",
+      "Blank search results ('zero_results') when using descriptive keywords",
+      "Face recognition failing for older, scanned, or non-human subjects"
+    ],
+    "pm_opportunities": [
+      "Implement true Semantic Search (embeddings) to map vague concepts to visual data",
+      "Introduce natural language query parsing (e.g., 'that hike I took with a red jacket')",
+      "Provide fallback fuzzy-matching when exact dates/locations are missing",
+      "Allow users to search by objects, activities, emotions, or color palettes",
+      "Surface contextual filters instantly when a generic keyword fails"
+    ],
     "top_quotes": [
-      {
-        "review_id": "as_14558771493",
-        "quote": "wrong date",
-        "source": "App Store",
-        "user_segment": "casual_small_library"
-      },
-      {
-        "review_id": "combined_8",
-        "quote": "Face recognition/face grouping not working for older photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
       {
         "review_id": "combined_9",
         "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
         "source": "Forums/Community",
         "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_location + wrong_results",
-    "missing_anchor": "exact_location",
-    "failure_point": "wrong_results",
-    "frequency": 5,
-    "severity_multiplier": 2,
-    "opportunity_score": 10,
-    "top_quotes": [
-      {
-        "review_id": "as_14558771493",
-        "quote": "wrong date",
-        "source": "App Store",
-        "user_segment": "casual_small_library"
       },
-      {
-        "review_id": "combined_8",
-        "quote": "Face recognition/face grouping not working for older photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_9",
-        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "filename + wrong_results",
-    "missing_anchor": "filename",
-    "failure_point": "wrong_results",
-    "frequency": 5,
-    "severity_multiplier": 2,
-    "opportunity_score": 10,
-    "top_quotes": [
-      {
-        "review_id": "as_14558771493",
-        "quote": "wrong date",
-        "source": "App Store",
-        "user_segment": "casual_small_library"
-      },
-      {
-        "review_id": "combined_8",
-        "quote": "Face recognition/face grouping not working for older photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_9",
-        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "album_name + wrong_results",
-    "missing_anchor": "album_name",
-    "failure_point": "wrong_results",
-    "frequency": 5,
-    "severity_multiplier": 2,
-    "opportunity_score": 10,
-    "top_quotes": [
-      {
-        "review_id": "as_14558771493",
-        "quote": "wrong date",
-        "source": "App Store",
-        "user_segment": "casual_small_library"
-      },
-      {
-        "review_id": "combined_8",
-        "quote": "Face recognition/face grouping not working for older photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_9",
-        "quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_date + zero_results",
-    "missing_anchor": "exact_date",
-    "failure_point": "zero_results",
-    "frequency": 3,
-    "severity_multiplier": 3,
-    "opportunity_score": 9,
-    "top_quotes": [
       {
         "review_id": "combined_18",
         "quote": "scrolling through years of photos one by one is the only option left",
         "source": "Forums/Community",
         "user_segment": "unclear"
       },
-      {
-        "review_id": "combined_29",
-        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_5",
-        "quote": "Now nothing happens",
-        "source": "Forums/Community",
-        "user_segment": "casual_small_library"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_location + zero_results",
-    "missing_anchor": "exact_location",
-    "failure_point": "zero_results",
-    "frequency": 3,
-    "severity_multiplier": 3,
-    "opportunity_score": 9,
-    "top_quotes": [
-      {
-        "review_id": "combined_18",
-        "quote": "scrolling through years of photos one by one is the only option left",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_29",
-        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_5",
-        "quote": "Now nothing happens",
-        "source": "Forums/Community",
-        "user_segment": "casual_small_library"
-      }
-    ]
-  },
-  {
-    "problem_pair": "filename + zero_results",
-    "missing_anchor": "filename",
-    "failure_point": "zero_results",
-    "frequency": 3,
-    "severity_multiplier": 3,
-    "opportunity_score": 9,
-    "top_quotes": [
-      {
-        "review_id": "combined_18",
-        "quote": "scrolling through years of photos one by one is the only option left",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_29",
-        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_5",
-        "quote": "Now nothing happens",
-        "source": "Forums/Community",
-        "user_segment": "casual_small_library"
-      }
-    ]
-  },
-  {
-    "problem_pair": "album_name + zero_results",
-    "missing_anchor": "album_name",
-    "failure_point": "zero_results",
-    "frequency": 3,
-    "severity_multiplier": 3,
-    "opportunity_score": 9,
-    "top_quotes": [
-      {
-        "review_id": "combined_18",
-        "quote": "scrolling through years of photos one by one is the only option left",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "combined_29",
-        "quote": "Nothing comes up when I use the \"search\" option in google photos.",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_5",
-        "quote": "Now nothing happens",
-        "source": "Forums/Community",
-        "user_segment": "casual_small_library"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_date + too_many_results",
-    "missing_anchor": "exact_date",
-    "failure_point": "too_many_results",
-    "frequency": 2,
-    "severity_multiplier": 2,
-    "opportunity_score": 4,
-    "top_quotes": [
-      {
-        "review_id": "combined_21",
-        "quote": "scrolling and scrolling in frustration",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_14",
-        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_location + too_many_results",
-    "missing_anchor": "exact_location",
-    "failure_point": "too_many_results",
-    "frequency": 2,
-    "severity_multiplier": 2,
-    "opportunity_score": 4,
-    "top_quotes": [
-      {
-        "review_id": "combined_21",
-        "quote": "scrolling and scrolling in frustration",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_14",
-        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "filename + too_many_results",
-    "missing_anchor": "filename",
-    "failure_point": "too_many_results",
-    "frequency": 2,
-    "severity_multiplier": 2,
-    "opportunity_score": 4,
-    "top_quotes": [
-      {
-        "review_id": "combined_21",
-        "quote": "scrolling and scrolling in frustration",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_14",
-        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "album_name + too_many_results",
-    "missing_anchor": "album_name",
-    "failure_point": "too_many_results",
-    "frequency": 2,
-    "severity_multiplier": 2,
-    "opportunity_score": 4,
-    "top_quotes": [
-      {
-        "review_id": "combined_21",
-        "quote": "scrolling and scrolling in frustration",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      },
-      {
-        "review_id": "curated_14",
-        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
-        "source": "Forums/Community",
-        "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "exact_date + no_nl_support",
-    "missing_anchor": "exact_date",
-    "failure_point": "no_nl_support",
-    "frequency": 1,
-    "severity_multiplier": 1,
-    "opportunity_score": 1,
-    "top_quotes": [
       {
         "review_id": "combined_27",
         "quote": "Why can't I easily search through photos using a keyword?",
@@ -328,48 +38,38 @@
     ]
   },
   {
-    "problem_pair": "exact_location + no_nl_support",
-    "missing_anchor": "exact_location",
-    "failure_point": "no_nl_support",
-    "frequency": 1,
-    "severity_multiplier": 1,
-    "opportunity_score": 1,
+    "title": "Information Architecture & Album Retrieval Friction",
+    "subtitle": "Extracted from App Store & Play Store reviews · Secondary evidence corroborating taxonomy failures",
+    "pain_points": [
+      "Users forget album names, leading to duplicate albums or lost collections",
+      "Overwhelming 'too_many_results' when searching broad geographical tags",
+      "Inability to combine filters (e.g., 'Person X' + 'Location Y')",
+      "Poor distinction between device folders vs. cloud-synced albums",
+      "Loss of context when photos are shared or downloaded without original metadata"
+    ],
+    "pm_opportunities": [
+      "Auto-generate intelligent smart collections based on recurring people and places",
+      "Implement multi-faceted search UI (combining who + where + when)",
+      "Provide visual clustering on maps rather than just text-based city tags",
+      "Improve album visibility and allow hierarchical folder nesting",
+      "Prompt users to tag or group photos post-event to prevent future memory gaps"
+    ],
     "top_quotes": [
       {
-        "review_id": "combined_27",
-        "quote": "Why can't I easily search through photos using a keyword?",
+        "review_id": "curated_14",
+        "quote": "No map to find 'by place' and 'places' too general (whole city!)",
         "source": "Forums/Community",
         "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "filename + no_nl_support",
-    "missing_anchor": "filename",
-    "failure_point": "no_nl_support",
-    "frequency": 1,
-    "severity_multiplier": 1,
-    "opportunity_score": 1,
-    "top_quotes": [
+      },
       {
-        "review_id": "combined_27",
-        "quote": "Why can't I easily search through photos using a keyword?",
+        "review_id": "combined_21",
+        "quote": "scrolling and scrolling in frustration",
         "source": "Forums/Community",
         "user_segment": "unclear"
-      }
-    ]
-  },
-  {
-    "problem_pair": "album_name + no_nl_support",
-    "missing_anchor": "album_name",
-    "failure_point": "no_nl_support",
-    "frequency": 1,
-    "severity_multiplier": 1,
-    "opportunity_score": 1,
-    "top_quotes": [
+      },
       {
-        "review_id": "combined_27",
-        "quote": "Why can't I easily search through photos using a keyword?",
+        "review_id": "combined_8",
+        "quote": "Face recognition/face grouping not working for older photos.",
         "source": "Forums/Community",
         "user_segment": "unclear"
       }
