@@ -1,0 +1,1145 @@
+[
+  {
+    "review_id": "as_14561366050",
+    "source": "App Store",
+    "photo_type": "event",
+    "memory_anchors_present": [
+      "device_used",
+      "activity",
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Too intrusive.",
+    "confidence": 0.78
+  },
+  {
+    "review_id": "as_14561365212",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Suck. No they want to charge for storage",
+    "confidence": 0.9
+  },
+  {
+    "review_id": "as_14561005810",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Precious memories.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "as_14559711700",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion",
+      "activity",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "as_14558771493",
+    "source": "App Store",
+    "photo_type": "pet",
+    "memory_anchors_present": [
+      "approx_time",
+      "person_present",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "scrolled_manually",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "casual_small_library",
+    "verbatim_quote": "wrong date",
+    "confidence": 0.93
+  },
+  {
+    "review_id": "as_14558684836",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "past happy memories",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "as_14556352148",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Emotional and funny recovery.",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "as_14554035249",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Is there seriously no way to add specific photos without granting full access to all my photos?",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "as_14553985159",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Amazing\u2026",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "as_14553800054",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Cool feature.",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "as_14553676644",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Amazing storage",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "as_14552659896",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "once you see it it's gone",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "as_14551452277",
+    "source": "App Store",
+    "photo_type": "people",
+    "memory_anchors_present": [
+      "person_present"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "My sister my best friend.",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "as_14550624468",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Little Storage for big $",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "as_14550423774",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Memories are the best part of life!",
+    "confidence": 0.0
+  },
+  {
+    "review_id": "as_14550384073",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "This app is great for organizing.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "as_14549511694",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Top shelf!",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "as_14548924513",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "person_present",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Super photo Memories.",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "as_14546809331",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "location_description",
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "So thankful when these lost memories appear",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "as_14544039782",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "activity",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "It won't let you upload or share any photos unless you give it permission to access your entire library.",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "combined_1",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "search doesn't return what I'm actually looking for",
+    "confidence": 0.96
+  },
+  {
+    "review_id": "combined_2",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "used_natural_language_query",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Search function no longer returning any results even for simple queries.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_4",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "faces, objects, and places all fail to surface the right photos",
+    "confidence": 0.97
+  },
+  {
+    "review_id": "combined_6",
+    "source": "Forums/Community",
+    "photo_type": "people",
+    "memory_anchors_present": [
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Face recognition stopped working.",
+    "confidence": 0.78
+  },
+  {
+    "review_id": "combined_8",
+    "source": "Forums/Community",
+    "photo_type": "people",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Face recognition/face grouping not working for older photos.",
+    "confidence": 0.9
+  },
+  {
+    "review_id": "combined_9",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "location_description"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "used_location_filter",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "when I try to find photos from a specific spot like a viewpoint or trail, it only groups by city, not the exact location.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_10",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Can you search for photos just by their locations.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_11",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "How do I search photos based on location.",
+    "confidence": 0.98
+  },
+  {
+    "review_id": "combined_12",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "How do I search by GPS location?",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "combined_13",
+    "source": "Forums/Community",
+    "photo_type": "screenshot",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "I can't find my screen shots",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_14",
+    "source": "Forums/Community",
+    "photo_type": "screenshot",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "detecting both Screenshots and camera pics together in a single folder",
+    "confidence": 0.6
+  },
+  {
+    "review_id": "combined_15",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "too_many_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Can't find your pics amongst a sea of GIFs and memes?",
+    "confidence": 0.6
+  },
+  {
+    "review_id": "combined_16",
+    "source": "Forums/Community",
+    "photo_type": "screenshot",
+    "memory_anchors_present": [
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "smartphone screenshots aren't saved by default",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_17",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "used_natural_language_query",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "couldn't recall when it was taken",
+    "confidence": 0.78
+  },
+  {
+    "review_id": "combined_18",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "scrolled_manually",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "scrolling through years of photos one by one is the only option left",
+    "confidence": 0.93
+  },
+  {
+    "review_id": "combined_20",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "How can I access my old photos?",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_21",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "scrolled_manually",
+    "failure_point": "too_many_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "scrolling and scrolling in frustration",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "combined_23",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Google photos search not working.",
+    "confidence": 0.0
+  },
+  {
+    "review_id": "combined_24",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "used_natural_language_query",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "No search results using keywords in description field.",
+    "confidence": 0.98
+  },
+  {
+    "review_id": "combined_25",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Not able to find certain keywords in \"Info\" description of photos.",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "combined_26",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Why are my photos not featured in the search result of the relevant keywords?",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "combined_27",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "no_nl_support",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Why can't I easily search through photos using a keyword?",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "combined_29",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Nothing comes up when I use the \"search\" option in google photos.",
+    "confidence": 0.97
+  },
+  {
+    "review_id": "combined_30",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "used_natural_language_query",
+    "failure_point": "zero_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "When I try to search anything nothing comes up?",
+    "confidence": 0.78
+  },
+  {
+    "review_id": "combined_32",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Google Photos search still not working.",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "combined_33",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "I found old photos yesterday on Google+.",
+    "confidence": 0.6
+  },
+  {
+    "review_id": "combined_34",
+    "source": "Forums/Community",
+    "photo_type": "screenshot",
+    "memory_anchors_present": [
+      "approx_time",
+      "activity",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "recovering_after_device_change",
+    "verbatim_quote": "I need that old phone to find a screenshot I took once",
+    "confidence": 0.97
+  },
+  {
+    "review_id": "combined_35",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "pain in the ass",
+    "confidence": 0.85
+  },
+  {
+    "review_id": "combined_38",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "How do I search my images by using simple keywords that apply to my images, such as \"sports\" \"boy\".",
+    "confidence": 0.97
+  },
+  {
+    "review_id": "curated_1",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "search doesn't return what I'm actually looking for",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "curated_3",
+    "source": "Forums/Community",
+    "photo_type": "people",
+    "memory_anchors_present": [
+      "person_present",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "used_face_filter",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "search for a specific person's face and it misses photos I know are there",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "curated_4",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "faces, objects, and places all fail to surface the right photos",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "curated_5",
+    "source": "Forums/Community",
+    "photo_type": "document",
+    "memory_anchors_present": [
+      "approx_time",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "gave_up",
+    "failure_point": "zero_results",
+    "user_segment_signal": "casual_small_library",
+    "verbatim_quote": "Now nothing happens",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "curated_7",
+    "source": "Forums/Community",
+    "photo_type": "screenshot",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "I can't find my screen shots",
+    "confidence": 0.95
+  },
+  {
+    "review_id": "curated_10",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "pain in the ass",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "curated_12",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "I found old photos yesterday on Google+",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "curated_13",
+    "source": "Forums/Community",
+    "photo_type": "people",
+    "memory_anchors_present": [
+      "person_present",
+      "activity",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "scrolled_manually",
+    "failure_point": "wrong_results",
+    "user_segment_signal": "recovering_after_device_change",
+    "verbatim_quote": "Face grouping / recognition not working on new iPhone",
+    "confidence": 0.96
+  },
+  {
+    "review_id": "curated_14",
+    "source": "Forums/Community",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "location_description"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "used_location_filter",
+    "failure_point": "too_many_results",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "No map to find 'by place' and 'places' too general (whole city!)",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "gp_14_ac8a46",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "just second! i need to thank you for helping me these last 4 years!",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "gp_49_84d821",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "The widget has no album option.",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "gp_53_284589",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "exact time \u231a",
+    "confidence": 0.9
+  },
+  {
+    "review_id": "gp_55_b724e4",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "all Ai features are missing on Motorola Razr Fold",
+    "confidence": 0.96
+  },
+  {
+    "review_id": "gp_73_c94076",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "The search in this version is HORRIBLE",
+    "confidence": 0.7
+  },
+  {
+    "review_id": "gp_91_91760e",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Review out-of-sync changes",
+    "confidence": 0.92
+  },
+  {
+    "review_id": "gp_96_7bba3f",
+    "source": "Google Play",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time",
+      "device_used"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Latest update applied (9/17/2026) has corrupted my SD card",
+    "confidence": 0.9
+  },
+  {
+    "review_id": "csv_22",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [],
+    "memory_anchors_missing": [],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "It\u2019s unlikely to give special move to win fast fast cooked trip n trucks.",
+    "confidence": 0.0
+  },
+  {
+    "review_id": "csv_66",
+    "source": "App Store",
+    "photo_type": "unknown",
+    "memory_anchors_present": [
+      "approx_time",
+      "emotion_or_occasion",
+      "activity"
+    ],
+    "memory_anchors_missing": [
+      "exact_date",
+      "exact_location",
+      "filename",
+      "album_name"
+    ],
+    "search_behavior": "unclear",
+    "failure_point": "unclear",
+    "user_segment_signal": "unclear",
+    "verbatim_quote": "Absolutely ridiculous.",
+    "confidence": 0.92
+  }
+]

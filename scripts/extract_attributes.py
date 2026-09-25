@@ -16,7 +16,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).parent.parent
 OUTPUT_DIR = BASE_DIR / os.getenv("OUTPUT_DIR", "data")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-GROQ_MODEL   = os.getenv("GROQ_MODEL", "llama3-70b-8192")
+GROQ_MODEL   = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
 def normalize_for_match(text: str) -> str:
@@ -39,7 +39,13 @@ def build_prompt(review: dict) -> list[dict]:
         "You are an expert NLP data extractor for a Google Photos research pipeline. "
         "Your task is to analyze ONE user review and extract precise attributes. "
         "You MUST return ONLY valid JSON matching the strict schema. "
-        "Do NOT guess. If something is unknown, use 'unknown' or 'unclear'."
+        "Do NOT guess. If something is unknown, use 'unknown' or 'unclear'.\n\n"
+        "IMPORTANT for `memory_anchors_missing`: Tag this based on IMPLICIT signals of uncertainty, not just literal keywords like 'forget'.\n"
+        "Examples:\n"
+        "- \"I have no idea when I took this\" \u2192 exact_date missing\n"
+        "- \"not sure where this was\" / \"somewhere in Europe I think\" \u2192 exact_location missing\n"
+        "- \"can't remember who all was there\" \u2192 person_present incomplete/missing\n"
+        "- \"don't remember what this was for\" \u2192 emotion_or_occasion / activity missing"
     )
 
     schema = {
@@ -66,7 +72,6 @@ def call_groq(messages: list) -> dict | None:
     payload = {
         "model": GROQ_MODEL,
         "messages": messages,
-        "response_format": {"type": "json_object"},
         "max_tokens": 1024,
         "temperature": 0.1,
     }
@@ -85,9 +90,23 @@ def call_groq(messages: list) -> dict | None:
                 continue
             resp.raise_for_status()
             data = resp.json()
-            return json.loads(data["choices"][0]["message"]["content"].strip())
+            content = data["choices"][0]["message"]["content"].strip()
+            
+            # Clean possible markdown wrapping before parsing json
+            if content.startswith("```"):
+                content = content.split("```")[1]
+                if content.startswith("json"):
+                    content = content[4:]
+                content = content.strip()
+            if content.endswith("```"):
+                content = content[:-3].strip()
+
+            return json.loads(content)
+        except httpx.HTTPStatusError as e:
+            print(f" [API Error: {e.response.status_code} - {e.response.text[:200]}] ", end="")
+            time.sleep(3)
         except Exception as e:
-            print(f" [API Error: {e}] ", end="")
+            print(f" [Error: {e}] ", end="")
             time.sleep(3)
     return None
 

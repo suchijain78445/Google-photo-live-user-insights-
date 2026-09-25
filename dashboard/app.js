@@ -236,6 +236,7 @@ function buildAnswerHTML(f) {
         <div class="ans-rq-label">Research Question</div>
         <div class="ans-rq-question">${escHtml(f.question || '')}</div>
       </div>
+      ${f.confidence_score === 0 ? `<div class="ans-source-tag" style="background:rgba(220, 38, 38, 0.2); color:#ef4444; border:1px solid rgba(220, 38, 38, 0.3); margin-left:auto; align-self:center;">No Evidence Found</div>` : ''}
     </div>
 
     ${f.executive_summary ? `

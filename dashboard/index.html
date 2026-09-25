@@ -111,6 +111,87 @@
         </div>
       </div>
 
+      <!-- TASK 2: Four Core Research Answers (Q1-Q4) -->
+      <div class="stats-row" style="margin-top: 16px;">
+        <div class="stat-card" style="cursor: pointer;" onclick="document.getElementById('q1-expand').classList.toggle('hidden')">
+          <div class="stat-icon stat-icon--violet">Q1</div>
+          <div>
+            <div class="stat-value" id="q1-val" style="font-size: 1.1rem; line-height: 1.2;">Loading...</div>
+            <div class="stat-label">Top Missing Photo Type</div>
+          </div>
+        </div>
+        <div class="stat-card" style="cursor: pointer;" onclick="document.getElementById('q2-expand').classList.toggle('hidden')">
+          <div class="stat-icon stat-icon--blue">Q2</div>
+          <div>
+            <div class="stat-value" id="q2-val" style="font-size: 1.1rem; line-height: 1.2;">Loading...</div>
+            <div class="stat-label">Top Anchor Remembered</div>
+          </div>
+        </div>
+        <div class="stat-card" style="cursor: pointer;" onclick="document.getElementById('q3-expand').classList.toggle('hidden')">
+          <div class="stat-icon stat-icon--amber">Q3</div>
+          <div>
+            <div class="stat-value" id="q3-val" style="font-size: 1.1rem; line-height: 1.2;">Loading...</div>
+            <div class="stat-label">Top Anchor Forgotten</div>
+          </div>
+        </div>
+        <div class="stat-card" style="cursor: pointer;" onclick="document.getElementById('q4-expand').classList.toggle('hidden')">
+          <div class="stat-icon stat-icon--teal">Q4</div>
+          <div>
+            <div class="stat-value" id="q4-val" style="font-size: 1.1rem; line-height: 1.2;">Loading...</div>
+            <div class="stat-label">Top Search Behavior</div>
+          </div>
+        </div>
+      </div>
+      <!-- Hidden expansion areas for Q1-Q4 evidence quotes -->
+      <div id="q1-expand" class="hidden panel" style="margin-bottom: 16px;">
+        <div class="panel-label">▸ EVIDENCE FOR Q1</div>
+        <div id="q1-quotes" style="font-size: 0.85rem; color: #94a3b8;">Loading quotes...</div>
+      </div>
+      <div id="q2-expand" class="hidden panel" style="margin-bottom: 16px;">
+        <div class="panel-label">▸ EVIDENCE FOR Q2</div>
+        <div id="q2-quotes" style="font-size: 0.85rem; color: #94a3b8;">Loading quotes...</div>
+      </div>
+      <div id="q3-expand" class="hidden panel" style="margin-bottom: 16px;">
+        <div class="panel-label">▸ EVIDENCE FOR Q3</div>
+        <div id="q3-quotes" style="font-size: 0.85rem; color: #94a3b8;">Loading quotes...</div>
+      </div>
+      <div id="q4-expand" class="hidden panel" style="margin-bottom: 16px;">
+        <div class="panel-label">▸ EVIDENCE FOR Q4</div>
+        <div id="q4-quotes" style="font-size: 0.85rem; color: #94a3b8;">Loading quotes...</div>
+      </div>
+
+      <!-- TASK 3: Segmentation Filter Bar -->
+      <div class="panel" style="margin-bottom: 16px;">
+        <div class="panel-label">▸ SEGMENTATION FILTERS</div>
+        <div style="display: flex; gap: 8px;">
+          <select id="filter-platform" class="ask-bar-btn" style="background: transparent; color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2);">
+            <option value="all">Platform: All</option>
+            <option value="app_store">App Store</option>
+            <option value="play_store">Play Store</option>
+            <option value="reddit">Reddit</option>
+            <option value="forums">Forums</option>
+          </select>
+          <select id="filter-photo" class="ask-bar-btn" style="background: transparent; color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2);">
+            <option value="all">Photo Type: All</option>
+            <option value="screenshot">Screenshot</option>
+            <option value="event">Event</option>
+            <option value="document">Document</option>
+            <option value="scanned_old_photo">Scanned Old Photo</option>
+            <option value="people">People</option>
+            <option value="pet">Pet</option>
+            <option value="receipt">Receipt</option>
+          </select>
+          <select id="filter-segment" class="ask-bar-btn" style="background: transparent; color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2);">
+            <option value="all">User Segment: All</option>
+            <option value="parent">Parent</option>
+            <option value="professional">Professional</option>
+            <option value="power_user_large_library">Power User</option>
+            <option value="casual_small_library">Casual User</option>
+            <option value="recovering_after_device_change">Recovering Device</option>
+          </select>
+        </div>
+      </div>
+
       <div class="dashboard-grid">
         <div class="panel">
           <div class="panel-label">▸ DATA SOURCES</div>
@@ -148,7 +229,7 @@
 
         <div class="panel">
           <div class="panel-label">▸ DISCOVERY SIGNAL GROUPS</div>
-          <div class="signal-chips">
+          <div class="signal-chips" id="signal-chips-container">
             <span class="chip chip--red">Search Failure <b>30</b></span>
             <span class="chip chip--amber">Memory Gaps <b>25</b></span>
             <span class="chip chip--amber">Face &amp; People <b>15</b></span>
@@ -334,7 +415,7 @@
           <div class="pipeline-icon">🎯</div>
           <div class="pipeline-num">STEP 03</div>
           <div class="pipeline-title">Filter</div>
-          <div class="pipeline-desc">Regex keyword filter isolates 71 discovery-relevant reviews — search failures, memory gaps, scrolling pain.</div>
+          <div class="pipeline-desc">Structured attribute extraction using LLMs to parse context, intent, and missing anchors from 71 discovery-relevant reviews.</div>
           <span class="pipeline-badge">filter.py</span>
         </div>
         <div class="pipeline-arrow">→</div>
@@ -342,7 +423,7 @@
           <div class="pipeline-icon">📊</div>
           <div class="pipeline-num">STEP 04</div>
           <div class="pipeline-title">Cluster</div>
-          <div class="pipeline-desc">Keyword-based clustering into 8 signal groups: Search, Memory, Face, Location, Screenshot, Scroll, Data Loss, Context.</div>
+          <div class="pipeline-desc">Attribute-based clustering into signal groups based on extracted metadata like failure points and memory anchors.</div>
           <span class="pipeline-badge">analysis/</span>
         </div>
         <div class="pipeline-arrow">→</div>
