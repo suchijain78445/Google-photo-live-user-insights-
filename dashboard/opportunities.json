@@ -1,0 +1,24 @@
+﻿[
+    {
+        "severity_multiplier":  3,
+        "problem_pair":  "exact_date + zero_results",
+        "opportunity_score":  36,
+        "missing_anchor":  "exact_date",
+        "frequency":  12,
+        "top_quotes":  [
+
+                       ],
+        "failure_point":  "zero_results"
+    },
+    {
+        "severity_multiplier":  2,
+        "problem_pair":  "exact_location + too_many_results",
+        "opportunity_score":  16,
+        "missing_anchor":  "exact_location",
+        "frequency":  8,
+        "top_quotes":  [
+
+                       ],
+        "failure_point":  "too_many_results"
+    }
+]
