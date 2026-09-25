@@ -509,7 +509,7 @@ async function renderOpportunities() {
         card.className = 'opp-card';
         card.innerHTML = `
           <div class="opp-card-header">
-            <div class="opp-card-icon" style="background:rgba(67,97,238,.15);border:1px solid rgba(67,97,238,.3)">⚡</div>
+            <div class="opp-card-icon" style="background:rgba(244,63,94,.15);border:1px solid rgba(244,63,94,.3)">🛡️</div>
             <div>
               <div class="opp-card-title">${escHtml(title)}</div>
               <div class="opp-card-sub">${escHtml(sub)}</div>
