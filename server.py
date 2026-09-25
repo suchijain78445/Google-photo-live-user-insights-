@@ -38,43 +38,54 @@ CORS(app)  # Allow requests from same origin (dashboard JS → /api/ask)
 if not GROQ_API_KEY:
     print("[ERROR] GROQ_API_KEY not set in .env — /api/ask will not work.")
 
-# ── Load filtered corpus once at startup ─────────────────────
 def load_corpus() -> tuple[str, list[str]]:
-    """Load filtered.json and build corpus text + source list."""
-    filtered_path = DATA_DIR / "filtered.json"
-    if not filtered_path.exists():
-        return "", []
-    with open(filtered_path, encoding="utf-8") as f:
-        records = json.load(f)
-    lines, sources = [], []
-    total = 0
-    for rec in records:
-        src  = rec.get("source", "")
-        rating = rec.get("rating")
-        text = rec.get("text", "")
-        rating_str = f" [★{rating}]" if rating else ""
-        line = f'[{src}{rating_str}]: "{text}"'
-        if total + len(line) > 70_000:
+    """Load structured data for RAG (Task 8)."""
+    extracted_path = DATA_DIR / "extracted.json"
+    answers_path = DATA_DIR / "core_answers.json"
+    
+    if not extracted_path.exists():
+        return "No extracted data.", []
+        
+    with open(extracted_path, encoding="utf-8") as f:
+        extracted = json.load(f)
+        
+    with open(answers_path, encoding="utf-8") as f:
+        answers = json.load(f)
+
+    # Build structured text
+    lines = []
+    sources = []
+    
+    lines.append(f"TOTAL REVIEWS ANALYZED: {answers.get('total_records', 0)}")
+    lines.append("AGGREGATED STATISTICS (Core Answers):")
+    lines.append(json.dumps(answers, indent=2)[:5000]) # Cap to avoid huge prompt
+    
+    lines.append("\n\nDETAILED REVIEW EVIDENCE (Sample of structured records):")
+    total = sum(len(line) for line in lines)
+    for rec in extracted:
+        sources.append(rec.get("source", ""))
+        rec_str = json.dumps(rec, indent=2)
+        if total + len(rec_str) > 70_000:
             break
-        lines.append(line)
-        sources.append(src)
-        total += len(line)
+        lines.append(rec_str)
+        total += len(rec_str)
+        
     return "\n".join(lines), sources
 
 CORPUS_TEXT, CORPUS_SOURCES = load_corpus()
-print(f"[SERVER] Corpus loaded: {len(CORPUS_TEXT):,} chars from {len(set(CORPUS_SOURCES))} sources")
+print(f"[SERVER] Structured RAG data loaded: {len(CORPUS_TEXT):,} chars from {len(set(CORPUS_SOURCES))} sources")
 
 
 # ── System prompt ─────────────────────────────────────────────
 SYSTEM_PROMPT = (
     "You are a senior UX researcher and product strategist specializing in photo management "
-    "and memory retrieval. You analyze real Google Photos user reviews.\n\n"
+    "and memory retrieval. You analyze structured JSON data derived from real Google Photos user reviews.\n\n"
     "Rules:\n"
-    "1. Only cite verbatim quotes that actually appear in the corpus provided.\n"
-    "2. Return ONLY valid JSON — no markdown fences, no extra text.\n"
-    "3. Set confidence_score <= 70 unless at least 2 independent sources support the finding.\n"
-    "4. Include 2-4 representative_quotes, copied verbatim from the corpus.\n"
-    "5. key_findings must have exactly 5 items."
+    "1. Only cite verbatim quotes that actually appear in the 'verbatim_quote' fields provided.\n"
+    "2. Base your statistical claims ONLY on the AGGREGATED STATISTICS provided.\n"
+    "3. Return ONLY valid JSON — no markdown fences, no extra text.\n"
+    "4. Include exactly 5 key_findings.\n"
+    "5. Include 2-4 representative_quotes, copied exactly from the structured records.\n"
 )
 
 
@@ -82,7 +93,7 @@ def build_user_prompt(question: str) -> str:
     sources_str = ", ".join(sorted(set(CORPUS_SOURCES)))
     return f"""Research question: {question}
 
-User review corpus (real verbatim quotes from Google Photos users):
+Data Context (Aggregated stats + Sample of structured records):
 {CORPUS_TEXT}
 
 Sources in dataset: {sources_str}
@@ -90,7 +101,7 @@ Sources in dataset: {sources_str}
 Return ONLY this JSON object — no markdown, no explanation:
 {{
   "question": "{question}",
-  "executive_summary": "2-3 sentence summary of the main finding",
+  "executive_summary": "2-3 sentence summary answering the question",
   "key_findings": [
     "Finding 1 — include a count where possible, e.g. 'Over 20 reviews mention...'",
     "Finding 2",
@@ -99,13 +110,13 @@ Return ONLY this JSON object — no markdown, no explanation:
     "Finding 5"
   ],
   "representative_quotes": [
-    {{"text": "verbatim quote copied exactly from corpus above", "source": "Google Play|App Store|Reddit|Forums/Community", "rating": null}},
+    {{"text": "verbatim quote copied exactly from a verbatim_quote field above", "source": "Google Play|App Store|Reddit|Forums/Community", "rating": null}},
     {{"text": "another verbatim quote", "source": "...", "rating": 1}}
   ],
   "pm_insight": "1-3 sentences on the product/engineering opportunity",
   "confidence_score": 0,
   "confidence_label": "High|Medium|Low",
-  "confidence_reason": "short phrase e.g. based on review volume and cross-source consistency",
+  "confidence_reason": "short phrase e.g. based on structured data frequencies",
   "sources": ["only sources that contributed evidence"]
 }}"""
 

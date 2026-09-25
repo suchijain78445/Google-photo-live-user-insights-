@@ -1,0 +1,27 @@
+﻿{
+    "Q1_photo_types":  [
+                           {
+                               "category":  "screenshot",
+                               "top_quotes":  "",
+                               "count":  23
+                           },
+                           {
+                               "category":  "event",
+                               "top_quotes":  "",
+                               "count":  18
+                           }
+                       ],
+    "total_records":  71,
+    "Q2_anchors_present":  [
+                               {
+                                   "category":  "approx_time",
+                                   "top_quotes":  "",
+                                   "count":  45
+                               },
+                               {
+                                   "category":  "person_present",
+                                   "top_quotes":  "",
+                                   "count":  30
+                               }
+                           ]
+}

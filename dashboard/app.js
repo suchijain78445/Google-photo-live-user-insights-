@@ -616,10 +616,79 @@ function escHtml(str) {
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// ── Core Answers & Opportunities ──────────────────────────────
+async function loadCoreAnswers() {
+  try {
+    const res = await fetch('../data/core_answers.json');
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    renderCoreAnswers(data);
+  } catch {
+    document.getElementById('core-answers-grid').innerHTML = '<div style="padding: 20px; color: #fca5a5;">Still processing attributes (this takes a few minutes)...</div>';
+  }
+}
+
+function renderCoreAnswers(data) {
+  const grid = document.getElementById('core-answers-grid');
+  if (!grid) return;
+  
+  // Example simple rendering of Q1 and Q2
+  const q1 = data.Q1_photo_types || [];
+  const q2 = data.Q2_anchors_present || [];
+  
+  grid.innerHTML = `
+    <div class="insight-card" style="padding: 24px; background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px;">
+      <h3 style="color: #60a5fa; margin-top: 0;">Q1. What types of old photos do users struggle to find?</h3>
+      <ul style="color: #cbd5e1; padding-left: 20px;">
+        ${q1.map(x => `<li><strong>${x.category}</strong>: ${x.count} reviews</li>`).join('')}
+      </ul>
+    </div>
+    <div class="insight-card" style="padding: 24px; background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px;">
+      <h3 style="color: #c084fc; margin-top: 0;">Q2. What information do they actually remember?</h3>
+      <ul style="color: #cbd5e1; padding-left: 20px;">
+        ${q2.map(x => `<li><strong>${x.category}</strong>: ${x.count} reviews</li>`).join('')}
+      </ul>
+    </div>
+  `;
+}
+
+async function loadOpportunities() {
+  try {
+    const res = await fetch('../data/opportunities.json');
+    if (!res.ok) throw new Error();
+    const opps = await res.json();
+    
+    const tbody = document.getElementById('opps-table-body');
+    if (!tbody) return;
+    
+    tbody.innerHTML = opps.map(o => `
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <td style="padding: 12px; color: #e2e8f0;">${o.missing_anchor}</td>
+        <td style="padding: 12px; color: #cbd5e1;">${o.failure_point}</td>
+        <td style="padding: 12px; color: #94a3b8;">${o.frequency}</td>
+        <td style="padding: 12px; color: #f87171;">${o.severity_multiplier}x</td>
+        <td style="padding: 12px; color: #fbbf24; font-weight: bold;">${o.opportunity_score}</td>
+        <td style="padding: 12px; color: #94a3b8; font-style: italic; font-size: 0.8rem;">"${o.top_quotes[0]?.quote || ''}"</td>
+      </tr>
+    `).join('');
+  } catch {
+    const tbody = document.getElementById('opps-table-body');
+    if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="padding: 24px; text-align: center; color: #fca5a5;">Computing Opportunity Matrix...</td></tr>';
+  }
+}
+
 // ── Init ──────────────────────────────────────────────────────
 (async function init() {
   setupScrollSpy();
   initChart();
-  await Promise.all([loadFindings(), loadFilteredRecords()]);
+  await Promise.all([loadFindings(), loadFilteredRecords(), loadCoreAnswers(), loadOpportunities()]);
+  
+  // Segment Filter Event Listeners
+  ['filter-platform', 'filter-segment', 'filter-photo'].forEach(id => {
+    document.getElementById(id)?.addEventListener('change', () => {
+      // In a full implementation, this would re-filter the data.
+      console.log(`Filter changed: ${id}`);
+    });
+  });
 })();
 
