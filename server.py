@@ -196,6 +196,18 @@ def check_evidence_gate(question: str) -> bool:
 
 # ── Routes ────────────────────────────────────────────────────
 
+@app.route("/api/findings")
+def api_findings():
+    return send_file(DATA_DIR / "findings.json")
+
+@app.route("/api/core-answers")
+def api_core_answers():
+    return send_file(DATA_DIR / "core_answers.json")
+
+@app.route("/api/sample-questions")
+def api_sample_questions():
+    return send_file(DATA_DIR / "sample_questions.json")
+
 @app.route("/")
 def index():
     """Serve the dashboard index.html."""

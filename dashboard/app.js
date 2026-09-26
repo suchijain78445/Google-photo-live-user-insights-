@@ -59,11 +59,15 @@ function setActiveNav(activeId) {
 // ── Data loading ─────────────────────────────────────────────
 async function loadFindings() {
   try {
-    const res = await fetch('findings.json');
+    const res = await fetch('/api/findings');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const text = await res.text();
     if (text.trim().startsWith('<')) throw new Error("Received HTML instead of JSON (Routing Error)");
     findings = JSON.parse(text);
+
+    if (!findings || findings.length === 0) {
+        throw new Error("No findings generated yet — ensure extraction pipeline has run.");
+    }
 
     const count = findings.filter(f => f.key_findings?.length).length;
     document.getElementById('findings-count').textContent  = count;
@@ -71,7 +75,6 @@ async function loadFindings() {
     const dfEl = document.getElementById('dataset-findings');
     if (dfEl) dfEl.textContent = count;
 
-    renderQuestionList();
     renderSignals();
     renderOpportunities();
     renderLibrary();
@@ -81,14 +84,27 @@ async function loadFindings() {
 
   } catch (err) {
     console.error("Failed to load findings:", err);
-    document.getElementById('findings-count').textContent  = "Err";
-    document.getElementById('stat-findings').textContent   = "Err";
+    document.getElementById('findings-count').textContent  = "0";
+    document.getElementById('stat-findings').textContent   = "0";
     const dfEl = document.getElementById('dataset-findings');
-    if (dfEl) dfEl.textContent = "Err";
+    if (dfEl) dfEl.textContent = "0";
+    
+    // For Top Discovery Insights fallback
+    const grid = document.getElementById('insight-cards-grid');
+    if (grid) grid.innerHTML = `<div style="grid-column:1/-1; padding: 20px; color: var(--text-muted);">${err.message}</div>`;
+  }
 
+  // Task 2: Load sample questions
+  try {
+    const res = await fetch('/api/sample-questions');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const sampleQuestions = await res.json();
+    renderSampleQuestions(sampleQuestions);
+  } catch (err) {
+    console.error("Failed to load sample questions:", err);
     document.getElementById('ql-list').innerHTML =
       `<div style="padding:16px;color:#fca5a5;font-size:.75rem">
-         Could not load findings.json<br>
+         Could not load sample questions.<br>
          <small style="color:#4a5568">${err.message}</small>
        </div>`;
   }
@@ -106,18 +122,34 @@ async function loadFilteredRecords() {
 }
 
 // ── Question list ─────────────────────────────────────────────
-function renderQuestionList() {
+function renderSampleQuestions(sampleQuestions) {
   const list = document.getElementById('ql-list');
+  if (!list) return;
   list.innerHTML = '';
+  
+  if (!sampleQuestions || sampleQuestions.length === 0) {
+    list.innerHTML = '<div style="padding:16px;color:#94a3b8;font-size:.75rem">No sample questions available.</div>';
+    return;
+  }
 
-  findings.forEach((f, i) => {
+  sampleQuestions.forEach((q, i) => {
     const item = document.createElement('div');
     item.className = 'ql-item';
     item.id = `ql-${i}`;
     item.innerHTML = `
       <span class="ql-num">Q${i + 1}</span>
-      <span class="ql-text">${escHtml(f.question || '')}</span>`;
-    item.addEventListener('click', () => selectFinding(i));
+      <span class="ql-text">${escHtml(q || '')}</span>`;
+    
+    // Wire up to autofill and submit Ask AI
+    item.addEventListener('click', () => {
+      // Highlight active question
+      document.querySelectorAll('.ql-item').forEach((el, idx) => {
+        el.classList.toggle('active', idx === i);
+      });
+      const input = document.getElementById('ask-ai-input');
+      if (input) input.value = q;
+      callAndRender(q, null); // don't cache in findings array
+    });
     list.appendChild(item);
   });
 }
@@ -474,9 +506,13 @@ function renderSignals() {
 
 async function loadCoreAnswers() {
   try {
-    const res = await fetch('core_answers.json');
+    const res = await fetch('/api/core-answers');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
+
+    if (!data || Object.keys(data).length === 0) {
+      throw new Error("No core answers generated yet — ensure extraction pipeline has run.");
+    }
 
     const getQuotesHtml = (items) => {
       if (!items || !items.length) return '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
@@ -505,6 +541,10 @@ async function loadCoreAnswers() {
     }
   } catch (err) {
     console.error("Failed to load core answers:", err);
+    ['q1','q2','q3','q4'].forEach(q => {
+      const el = document.getElementById(`${q}-val`);
+      if (el) el.textContent = "Data not found";
+    });
   }
 }
 
@@ -514,10 +554,14 @@ async function renderOpportunities() {
   if (!list) return;
 
   try {
-    const res = await fetch('opportunities.json');
+    const res = await fetch('opportunities.json'); // Fetches static JSON
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const oppsData = await res.json();
     
+    if (!oppsData || oppsData.length === 0) {
+        throw new Error("No opportunities data generated yet — ensure extraction pipeline has run.");
+    }
+
     list.innerHTML = '';
     oppsData.forEach((opp, oi) => {
         const quotesHTML = (opp.top_quotes && opp.top_quotes.length ? opp.top_quotes : [{quote:'No quote available.',source:''}])
@@ -572,7 +616,7 @@ async function renderOpportunities() {
     });
   } catch (err) {
     console.error("Failed to load opportunities:", err);
-    list.innerHTML = '<div class="generic-loading"><span>Failed to load opportunities.</span></div>';
+    list.innerHTML = `<div style="padding: 20px; color: var(--text-muted);">${err.message}</div>`;
   }
 }
 
