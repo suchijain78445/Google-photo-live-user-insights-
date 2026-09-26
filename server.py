@@ -196,17 +196,16 @@ def check_evidence_gate(question: str) -> bool:
 
 # ── Routes ────────────────────────────────────────────────────
 
-@app.route("/api/findings")
-def api_findings():
-    return send_file(DATA_DIR / "findings.json")
-
-@app.route("/api/core-answers")
-def api_core_answers():
-    return send_file(DATA_DIR / "core_answers.json")
-
-@app.route("/api/sample-questions")
-def api_sample_questions():
-    return send_file(DATA_DIR / "sample_questions.json")
+@app.route("/api/index.py", methods=["GET"])
+def api_index_get():
+    file = request.args.get("file")
+    if file == "findings":
+        return send_file(DATA_DIR / "findings.json")
+    if file == "core-answers":
+        return send_file(DATA_DIR / "core_answers.json")
+    if file == "sample-questions":
+        return send_file(DATA_DIR / "sample_questions.json")
+    return jsonify({"error": "Invalid file requested"}), 400
 
 @app.route("/")
 def index():

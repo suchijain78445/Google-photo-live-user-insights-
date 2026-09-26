@@ -59,7 +59,7 @@ function setActiveNav(activeId) {
 // ── Data loading ─────────────────────────────────────────────
 async function loadFindings() {
   try {
-    const res = await fetch('/api/findings');
+    const res = await fetch('/api/index.py?file=findings');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const text = await res.text();
     if (text.trim().startsWith('<')) throw new Error("Received HTML instead of JSON (Routing Error)");
@@ -96,7 +96,7 @@ async function loadFindings() {
 
   // Task 2: Load sample questions
   try {
-    const res = await fetch('/api/sample-questions');
+    const res = await fetch('/api/index.py?file=sample-questions');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const sampleQuestions = await res.json();
     renderSampleQuestions(sampleQuestions);
@@ -506,7 +506,7 @@ function renderSignals() {
 
 async function loadCoreAnswers() {
   try {
-    const res = await fetch('/api/core-answers');
+    const res = await fetch('/api/index.py?file=core-answers');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
