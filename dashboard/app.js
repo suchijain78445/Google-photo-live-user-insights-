@@ -526,18 +526,33 @@ async function loadCoreAnswers() {
     if (data.Q1_photo_types && data.Q1_photo_types.length) {
       document.getElementById('q1-val').textContent = `${data.Q1_photo_types[0].category} (${data.Q1_photo_types[0].count})`;
       document.getElementById('q1-quotes').innerHTML = getQuotesHtml(data.Q1_photo_types);
+    } else {
+      document.getElementById('q1-val').textContent = 'Data not found';
+      document.getElementById('q1-quotes').innerHTML = '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
     }
+
     if (data.Q2_anchors_present && data.Q2_anchors_present.length) {
       document.getElementById('q2-val').textContent = `${data.Q2_anchors_present[0].category} (${data.Q2_anchors_present[0].count})`;
       document.getElementById('q2-quotes').innerHTML = getQuotesHtml(data.Q2_anchors_present);
+    } else {
+      document.getElementById('q2-val').textContent = 'Data not found';
+      document.getElementById('q2-quotes').innerHTML = '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
     }
+
     if (data.Q3_anchors_missing && data.Q3_anchors_missing.length) {
       document.getElementById('q3-val').textContent = `${data.Q3_anchors_missing[0].category} (${data.Q3_anchors_missing[0].count})`;
       document.getElementById('q3-quotes').innerHTML = getQuotesHtml(data.Q3_anchors_missing);
+    } else {
+      document.getElementById('q3-val').textContent = 'Data not found';
+      document.getElementById('q3-quotes').innerHTML = '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
     }
+
     if (data.Q4_search_behavior && data.Q4_search_behavior.length) {
       document.getElementById('q4-val').textContent = `${data.Q4_search_behavior[0].behavior} (${data.Q4_search_behavior[0].total_count})`;
       document.getElementById('q4-quotes').innerHTML = getQuotesHtml(data.Q4_search_behavior);
+    } else {
+      document.getElementById('q4-val').textContent = 'Data not found';
+      document.getElementById('q4-quotes').innerHTML = '<div style="font-size: 0.85rem; color: #94a3b8;">No data available.</div>';
     }
   } catch (err) {
     console.error("Failed to load core answers:", err);
