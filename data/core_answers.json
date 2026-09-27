@@ -2,23 +2,23 @@
   "Q1_photo_types": [
     {
       "category": "unknown",
-      "count": 54,
+      "count": 45,
       "top_quotes": [
-        {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
-          "source": "App Store",
-          "user_segment": "unclear"
-        },
-        {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
-          "source": "App Store",
-          "user_segment": "unclear"
-        },
         {
           "review_id": "as_14559711700",
           "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
+          "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -73,30 +73,6 @@
       ]
     },
     {
-      "category": "event",
-      "count": 1,
-      "top_quotes": [
-        {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
-          "source": "App Store",
-          "user_segment": "unclear"
-        }
-      ]
-    },
-    {
-      "category": "pet",
-      "count": 1,
-      "top_quotes": [
-        {
-          "review_id": "as_14558771493",
-          "quote": "wrong date",
-          "source": "App Store",
-          "user_segment": "casual_small_library"
-        }
-      ]
-    },
-    {
       "category": "document",
       "count": 1,
       "top_quotes": [
@@ -112,23 +88,23 @@
   "Q2_anchors_present": [
     {
       "category": "emotion_or_occasion",
-      "count": 23,
+      "count": 14,
       "top_quotes": [
         {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -136,14 +112,8 @@
     },
     {
       "category": "activity",
-      "count": 15,
+      "count": 11,
       "top_quotes": [
-        {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
-          "source": "App Store",
-          "user_segment": "unclear"
-        },
         {
           "review_id": "as_14559711700",
           "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
@@ -151,23 +121,23 @@
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14558771493",
-          "quote": "wrong date",
+          "review_id": "as_14548924513",
+          "quote": "Super photo Memories.",
           "source": "App Store",
-          "user_segment": "casual_small_library"
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "as_14544039782",
+          "quote": "It won't let you upload or share any photos unless you give it permission to access your entire library.",
+          "source": "App Store",
+          "user_segment": "unclear"
         }
       ]
     },
     {
       "category": "device_used",
-      "count": 10,
+      "count": 8,
       "top_quotes": [
-        {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
-          "source": "App Store",
-          "user_segment": "unclear"
-        },
         {
           "review_id": "as_14559711700",
           "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
@@ -175,23 +145,23 @@
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14549511694",
-          "quote": "Top shelf!",
+          "review_id": "as_14544039782",
+          "quote": "It won't let you upload or share any photos unless you give it permission to access your entire library.",
           "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_6",
+          "quote": "Face recognition stopped working.",
+          "source": "Forums/Community",
           "user_segment": "unclear"
         }
       ]
     },
     {
       "category": "approx_time",
-      "count": 10,
+      "count": 8,
       "top_quotes": [
-        {
-          "review_id": "as_14558771493",
-          "quote": "wrong date",
-          "source": "App Store",
-          "user_segment": "casual_small_library"
-        },
         {
           "review_id": "combined_18",
           "quote": "scrolling through years of photos one by one is the only option left",
@@ -203,19 +173,19 @@
           "quote": "scrolling and scrolling in frustration",
           "source": "Forums/Community",
           "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_33",
+          "quote": "I found old photos yesterday on Google+.",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
         }
       ]
     },
     {
       "category": "person_present",
-      "count": 5,
+      "count": 4,
       "top_quotes": [
-        {
-          "review_id": "as_14558771493",
-          "quote": "wrong date",
-          "source": "App Store",
-          "user_segment": "casual_small_library"
-        },
         {
           "review_id": "as_14551452277",
           "quote": "My sister my best friend.",
@@ -226,6 +196,12 @@
           "review_id": "as_14548924513",
           "quote": "Super photo Memories.",
           "source": "App Store",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "curated_3",
+          "quote": "search for a specific person's face and it misses photos I know are there",
+          "source": "Forums/Community",
           "user_segment": "unclear"
         }
       ]
@@ -258,23 +234,23 @@
   "Q3_anchors_missing": [
     {
       "category": "exact_date",
-      "count": 47,
+      "count": 36,
       "top_quotes": [
         {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -282,23 +258,23 @@
     },
     {
       "category": "exact_location",
-      "count": 47,
+      "count": 36,
       "top_quotes": [
         {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -306,23 +282,23 @@
     },
     {
       "category": "filename",
-      "count": 47,
+      "count": 36,
       "top_quotes": [
         {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -330,23 +306,23 @@
     },
     {
       "category": "album_name",
-      "count": 47,
+      "count": 36,
       "top_quotes": [
         {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
+          "review_id": "as_14559711700",
+          "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561365212",
-          "quote": "Suck. No they want to charge for storage",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14561005810",
-          "quote": "Precious memories.",
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
           "source": "App Store",
           "user_segment": "unclear"
         }
@@ -356,16 +332,8 @@
   "Q4_search_behavior": [
     {
       "behavior": "unclear",
-      "total_count": 55,
-      "high_memory_count": 12,
-      "low_memory_count": 43,
+      "count": 45,
       "top_quotes": [
-        {
-          "review_id": "as_14561366050",
-          "quote": "Too intrusive.",
-          "source": "App Store",
-          "user_segment": "unclear"
-        },
         {
           "review_id": "as_14559711700",
           "quote": "Why on earth would I want my photo deleted off my device if I was only deleting it off of Google Photos?",
@@ -373,44 +341,22 @@
           "user_segment": "unclear"
         },
         {
-          "review_id": "as_14549511694",
-          "quote": "Top shelf!",
+          "review_id": "as_14558684836",
+          "quote": "past happy memories",
           "source": "App Store",
-          "user_segment": "unclear"
-        }
-      ]
-    },
-    {
-      "behavior": "scrolled_manually",
-      "total_count": 4,
-      "high_memory_count": 3,
-      "low_memory_count": 1,
-      "top_quotes": [
-        {
-          "review_id": "as_14558771493",
-          "quote": "wrong date",
-          "source": "App Store",
-          "user_segment": "casual_small_library"
-        },
-        {
-          "review_id": "combined_21",
-          "quote": "scrolling and scrolling in frustration",
-          "source": "Forums/Community",
           "user_segment": "unclear"
         },
         {
-          "review_id": "curated_13",
-          "quote": "Face grouping / recognition not working on new iPhone",
-          "source": "Forums/Community",
-          "user_segment": "recovering_after_device_change"
+          "review_id": "as_14556352148",
+          "quote": "Emotional and funny recovery.",
+          "source": "App Store",
+          "user_segment": "unclear"
         }
       ]
     },
     {
       "behavior": "used_natural_language_query",
-      "total_count": 4,
-      "high_memory_count": 0,
-      "low_memory_count": 4,
+      "count": 4,
       "top_quotes": [
         {
           "review_id": "combined_2",
@@ -433,10 +379,32 @@
       ]
     },
     {
+      "behavior": "scrolled_manually",
+      "count": 3,
+      "top_quotes": [
+        {
+          "review_id": "combined_18",
+          "quote": "scrolling through years of photos one by one is the only option left",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "combined_21",
+          "quote": "scrolling and scrolling in frustration",
+          "source": "Forums/Community",
+          "user_segment": "unclear"
+        },
+        {
+          "review_id": "curated_13",
+          "quote": "Face grouping / recognition not working on new iPhone",
+          "source": "Forums/Community",
+          "user_segment": "recovering_after_device_change"
+        }
+      ]
+    },
+    {
       "behavior": "used_location_filter",
-      "total_count": 2,
-      "high_memory_count": 0,
-      "low_memory_count": 2,
+      "count": 2,
       "top_quotes": [
         {
           "review_id": "combined_9",
@@ -454,9 +422,7 @@
     },
     {
       "behavior": "used_face_filter",
-      "total_count": 1,
-      "high_memory_count": 1,
-      "low_memory_count": 0,
+      "count": 1,
       "top_quotes": [
         {
           "review_id": "curated_3",
@@ -468,9 +434,7 @@
     },
     {
       "behavior": "gave_up",
-      "total_count": 1,
-      "high_memory_count": 1,
-      "low_memory_count": 0,
+      "count": 1,
       "top_quotes": [
         {
           "review_id": "curated_5",
@@ -480,6 +444,5 @@
         }
       ]
     }
-  ],
-  "total_records": 67
+  ]
 }
